@@ -1,3 +1,3 @@
 % rebase('layout.tpl', title=title)
 
-<h2>{{ title }}</h2>
+<p class="head-p">{{ title }}</p>

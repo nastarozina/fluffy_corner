@@ -5,37 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Приют "Пушистый уголок"</title>
     <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
-    <script src="/static/scripts/modernizr-2.6.2.js"></script> -->
+    <!-- <script src="/static/scripts/modernizr-2.6.2.js"></script> -->
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand">Приют для животных "Пушистый уголок"</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/home">Главная</a></li>
-                    <li><a href="/pets">Найти питомца</a></li>
-                    <li><a href="/needs">Нужды</a></li>
-                    <li><a href="/stories">Счастливые истории</a></li>
-                    <li><a href="/about">О нас</a></li>
-                </ul>
-            </div>
-        </div>
+    <header class="site-header">
+    <div class="logo-container">
+    <a href="/">
+        <img class="logo" src="static\images\лого.png">
+    </a>
+    <a href="/" class="navbar-brand">Приют для животных<br>"Пушистый уголок"</a>
     </div>
+            <nav class="navbar">
+                <a href="/pets">Найти питомца</a>
+                <a href="/needs">Нужды</a>
+                <a href="/stories">Счастливые истории</a>
+                <a href="/about">О нас</a>
+            </nav>
+        </div>
+    <a class="button" href="/help">Помочь</a>
+    </header>
 
     <div class="container body-content">
         {{!base}}
-        <hr />
         <footer>
+            <p>© 2026 Приют "Пушистый уголок"</p>
         </footer>
     </div>
 </body>
