@@ -28,9 +28,20 @@
 
     <div class="container body-content">
         {{!base}}
-        <footer>
-            <p>© 2026 Приют "Пушистый уголок"</p>
-        </footer>
     </div>
+    <footer class="footer">
+            <p class="Contacts-p">Контакты</p>
+            <p>Телефон бесплатной горячей линии:
+            <span>+7 (999) 210-88-37 </span>
+            </p>
+            <p>E-mail:
+            <span>rozhinaanasteisha@yandex.ru</span>
+            </p>
+            <p>Адрес:
+            <span>Россия, Санкт-Петербург, Московский проспект, 149BA</span>
+            </p>
+            <hr>
+        <p class="final">© 2026 Приют "Пушистый уголок". Все права защищены.</p>
+        </footer>
 </body>
 </html>

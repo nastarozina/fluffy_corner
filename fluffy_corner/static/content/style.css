@@ -1,9 +1,10 @@
 @font-face {
-    font-family: 'MyFont';
+    font-family: 'baseFont';
     src: url('/static/fonts/SofiaSans-VariableFont_wght.ttf') format('truetype');
 }
 body {
-    font-family: 'MyFont';
+    font-family: 'baseFont';
+    margin: 0;
 }
 .navbar {
     display: flex;
@@ -53,4 +54,30 @@ body {
 }
 .head-p {
     font-size: 55px;
+}
+
+.footer {
+    background-color: #4a4542;
+    color: white;
+}
+
+.footer p span {
+    margin-left: 10px;
+    font-size: 18.5px
+}
+
+.final {
+    color: #928F8E;
+    font-size: 14px
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #928F8E;
+}
+.Contacts-p {
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: cornflowerblue;
+    text-underline-offset: 7px;
 }
