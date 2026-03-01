@@ -26,6 +26,10 @@
     </div>
 
 </div>
+<div class="needs-top-left">
+    <div class="needs-header-image-left">
+            <img src="/static/images/megapt.png" alt="Медикаменты">
+    </div>
     <div class="needs-section">
         <h2>💊 Медикаменты</h2>
         <p>В нашей ветаптечке всегда нужны:</p>
@@ -36,8 +40,10 @@
             <li>Шприцы (разных объемов), перчатки, бинты, вата</li>
             <li>Любые лекарства, назначенные нашими подопечными (по списку в веткабинете)</li>
         </ul>
+        
     </div>
-
+    
+</div>
     <div class="needs-section">
         <h2>🧼 Хозяйственные товары</h2>
         <ul>
@@ -50,7 +56,7 @@
     </div>
 
     <div class="needs-section">
-        <h2>🛏️ Амуниция и предметы уюта</h2>
+        <h2> Амуниция и предметы уюта</h2>
         <ul>
             <li>Миски (керамические, металлические, пластиковые)</li>
             <li>Лежанки, домики, матрасики, пледы</li>
@@ -71,7 +77,6 @@
         </ul>
         <div class="payment-details">
             <p><strong>Карта Сбербанк:</strong> 1234 5678 9012 3456</p>
-            <p><strong>PayPal:</strong> shelter@pawcorner.ru</p>
             <p><strong>Яндекс.Деньги:</strong> 4100123456789012</p>
         </div>
     </div>
