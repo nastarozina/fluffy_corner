@@ -30,3 +30,11 @@ def happy_stories():
 def stories_redirect():
     """Redirect /stories to /happy-stories"""
     redirect('/happy-stories')
+
+@route('/about')
+@view('about_us')
+def about():
+    """Renders the about us page."""
+    return dict(
+        title = 'О нас'
+    )
