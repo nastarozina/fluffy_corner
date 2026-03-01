@@ -32,16 +32,24 @@
     <footer class="footer">
             <p class="Contacts-p">Контакты</p>
             <p>Телефон бесплатной горячей линии:
-            <span>+7 (999) 210-88-37 </span>
+                <span>+7 (999) 210-88-37 </span>
             </p>
             <p>E-mail:
-            <span>rozhinaanasteisha@yandex.ru</span>
+                <span>rozhinaanasteisha@yandex.ru</span>
             </p>
             <p>Адрес:
-            <span>Россия, Санкт-Петербург, Московский проспект, 149BA</span>
+                <span>Россия, Санкт-Петербург, Московский проспект, 149BA</span>
             </p>
+            <div class="icons">
+                <a href="https://t.me/loudlig" target="_blank">
+                    <img class="icon" src="static\images\icon-telegram.png">
+                </a>
+                <a href="https://vk.com/id624802621" target="_blank">
+                    <img class="icon" src="static\images\icon-vk.png">
+                </a>
+            </div>
             <hr>
         <p class="final">© 2026 Приют "Пушистый уголок". Все права защищены.</p>
-        </footer>
+    </footer>
 </body>
 </html>

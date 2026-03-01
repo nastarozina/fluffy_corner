@@ -54,11 +54,13 @@ body {
 }
 .head-p {
     font-size: 55px;
+    margin-left: 20px
 }
 
 .footer {
-    background-color: #4a4542;
+    background-color: #181e21;
     color: white;
+    padding-left: 20px
 }
 
 .footer p span {
@@ -68,7 +70,8 @@ body {
 
 .final {
     color: #928F8E;
-    font-size: 14px
+    font-size: 14px;
+    padding-bottom: 12px
 }
 
 hr {
@@ -76,8 +79,17 @@ hr {
     border-top: 1px solid #928F8E;
 }
 .Contacts-p {
+    padding-top: 20px;
     font-size: 20px;
     text-decoration: underline;
     text-decoration-color: cornflowerblue;
     text-underline-offset: 7px;
+}
+.icons {
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+}
+.icon:hover {
+    filter: grayscale(100%) brightness(70%);
 }
