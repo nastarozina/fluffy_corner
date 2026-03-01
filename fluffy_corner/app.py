@@ -7,13 +7,17 @@ import os
 import sys
 
 # routes contains the HTTP handlers for our server and must be imported.
-import routes
+from routes import *
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     # Debug mode will enable more verbose output in the console window.
     # It must be set at the beginning of the script.
     bottle.debug(True)
 
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+VIEWS_ROOT = os.path.join(PROJECT_ROOT, 'views')
+# Вставляем путь в начало списка, чтобы Bottle искал шаблоны там
+bottle.TEMPLATE_PATH.insert(0, VIEWS_ROOT)
 def wsgi_app():
     """Returns the application to make available through wfastcgi. This is used
     when the site is published to Microsoft Azure."""

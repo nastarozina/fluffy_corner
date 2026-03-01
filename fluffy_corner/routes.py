@@ -10,5 +10,10 @@ from bottle import route, view, template, redirect
 def home():
     """Renders the home page."""
     return dict(
-        title = 'Питомцы'
+        title = 'Питомцыы'
     )
+    
+@route('/needs')
+@view('needs')
+def needs():
+    return dict(title='Нужды приютаа!')
