@@ -10,6 +10,7 @@
         <p><strong>2025-2026</strong> — особенные годы для нас. За это время 28 наших подопечных уже нашли любящие семьи!</p>
     </div>
 
+    <!-- Рекс -->
     <div class="story-card">
         <div class="story-header">
             <h2>Рекс: Из цепей в чемпионы</h2>
@@ -29,6 +30,7 @@
         </div>
     </div>
 
+    <!-- Соня -->
     <div class="story-card">
         <div class="story-header">
             <h2>Соня: Муза для художницы</h2>
@@ -36,7 +38,7 @@
         </div>
         <div class="story-content">
             <div class="story-photo-placeholder">
-                <img src="/static/images/stories/sonya.jpg" alt="Фото Сони" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/stories/sonua.jpg" alt="Фото Сони" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">Здесь будет фото Сони</div>
             </div>
             <div class="story-text">
@@ -48,6 +50,7 @@
         </div>
     </div>
 
+    <!-- Бим и Тимка -->
     <div class="story-card">
         <div class="story-header">
             <h2>Бим и Тимка: Лучшие друзья нашли дом вместе</h2>
@@ -55,7 +58,7 @@
         </div>
         <div class="story-content">
             <div class="story-photo-placeholder">
-                <img src="/static/images/stories/bim_timka.jpg" alt="Фото Бима и Тимки" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/stories/bim_tim.jpg" alt="Фото Бима и Тимки" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">Здесь будет фото Бима и Тимки</div>
             </div>
             <div class="story-text">
@@ -67,6 +70,7 @@
         </div>
     </div>
 
+    <!-- Маркиза -->
     <div class="story-card">
         <div class="story-header">
             <h2>Маркиза: Из приюта в библиотеку</h2>
@@ -74,7 +78,7 @@
         </div>
         <div class="story-content">
             <div class="story-photo-placeholder">
-                <img src="/static/images/stories/marquise.jpg" alt="Фото Маркизы" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/stories/markise.jpg" alt="Фото Маркизы" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">Здесь будет фото Маркизы</div>
             </div>
             <div class="story-text">
@@ -86,6 +90,7 @@
         </div>
     </div>
 
+    <!-- Шарик -->
     <div class="story-card">
         <div class="story-header">
             <h2>Шарик: Со стройки в спасатели МЧС</h2>
@@ -105,6 +110,7 @@
         </div>
     </div>
 
+    <!-- Муся -->
     <div class="story-card">
         <div class="story-header">
             <h2>Муся: Кошка, которая спасла хозяйку</h2>
@@ -112,7 +118,7 @@
         </div>
         <div class="story-content">
             <div class="story-photo-placeholder">
-                <img src="/static/images/stories/musya.jpg" alt="Фото Муси" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/stories/mysya.jpg" alt="Фото Муси" class="story-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">Здесь будет фото Муси</div>
             </div>
             <div class="story-text">
@@ -124,6 +130,7 @@
         </div>
     </div>
 
+    <!-- Джек -->
     <div class="story-card">
         <div class="story-header">
             <h2>Джек: Из ничейного в полицейского</h2>
@@ -143,6 +150,7 @@
         </div>
     </div>
 
+    <!-- Кнопка -->
     <div class="story-card">
         <div class="story-header">
             <h2>Кнопка: Маленькое чудо для большой семьи</h2>
@@ -189,7 +197,7 @@
         <p>Возможно, именно вы подарите счастье тому, кто сейчас ждёт вас в приюте. Посмотрите на наших подопечных в разделе Наши хвостики — 15 собак и 10 кошек мечтают о доме.</p>
         <p class="note">Если вы уже взяли у нас питомца и хотите поделиться своей историей (и фотографиями!), мы будем очень рады. Присылайте рассказы на нашу почту или в сообщения группы. Лучшие истории мы публикуем здесь и дарим памятный подарок от приюта!</p>
         <div class="contact-for-stories">
-            <p>📧 koval_moon@mail.ru  |  📱 +7 (999) 123-45-67 (Telegram/WhatsApp)</p>
+            <p>📧 koval_moon@mail.ru  |  📱 +7 (921) 372-72-90 (Telegram)</p>
             <p class="small">Автор лучшей истории марта получит сертификат в зоомагазин на 2000₽</p>
         </div>
     </div>
