@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Приют "Пушистый уголок"</title>
     <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
+    <link rel="icon" href="/static/images/favicon.ico">
 </head>
 
 <body>
