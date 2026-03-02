@@ -185,9 +185,6 @@
         box-shadow: 0 5px 15px rgba(100, 62, 120, 0.3);
     }
 
-.needs-contact {
-    transform: translateY(60px);
-}
 
 .button.square {
     width: 90px;

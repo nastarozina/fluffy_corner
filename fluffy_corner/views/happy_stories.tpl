@@ -1,5 +1,5 @@
 % rebase('layout.tpl', title=title)
-
+<link rel="stylesheet" type="text/css" href="/static/content/style_stories.css" />
 <div class="happy-stories-page">
     
     <h1 class="header-h1">Счастливые истории наших выпускников</h1>
