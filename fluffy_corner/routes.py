@@ -24,7 +24,7 @@ def home():
     return dict(
         title = 'Питомцы',
         pets=data
-
+    )
 @route('/needs')
 @view('needs')
 def needs():
