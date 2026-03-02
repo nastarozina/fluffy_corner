@@ -14,7 +14,7 @@
         </div>
         <div class="hero-image">
             <div class="hero-photo-placeholder">
-                <img src="/static/images/home/hero-dog.jpg" alt="Счастливая собака" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/home/happydog.jpg" alt="Счастливая собака" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">🐕 Счастливая собака</div>
             </div>
         </div>
@@ -52,23 +52,23 @@
         <h2>Наши подопечные</h2>
         <div class="gallery-grid">
             <div class="gallery-item large">
-                <img src="/static/images/home/gallery-1.jpg" alt="Собаки в приюте" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/home/dogs.jpg" alt="Собаки в приюте" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">🐕 Собаки</div>
             </div>
             <div class="gallery-item">
-                <img src="/static/images/home/gallery-2.jpg" alt="Кошка" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/home/cata).jpg" alt="Кошка" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">🐱 Кошка</div>
             </div>
             <div class="gallery-item">
-                <img src="/static/images/home/gallery-3.jpg" alt="Щенки" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/home/dogi.jpg" alt="Щенки" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">🐶 Щенки</div>
             </div>
             <div class="gallery-item">
-                <img src="/static/images/home/gallery-4.jpg" alt="Котята" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/home/kittens.jpg" alt="Котята" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">🐱 Котята</div>
             </div>
             <div class="gallery-item">
-                <img src="/static/images/home/gallery-5.jpg" alt="Собака и кошка вместе" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img src="/static/images/home/helps.jpg" alt="Собака и кошка вместе" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="placeholder-image" style="display: none;">🐕🐱 Друзья</div>
             </div>
         </div>
@@ -82,13 +82,13 @@
         </div>
     </section>
     
-    <!-- Они ждут свой дом (3 питомца с новыми кличками) -->
+    <!-- Они ждут свой дом -->
     <section class="featured-pets">
         <h2>Они ждут свой дом</h2>
         <div class="pets-showcase">
             <div class="pet-showcase-card">
                 <div class="pet-showcase-photo">
-                    <img src="/static/images/home/pet-baron.jpg" alt="Барон" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="/static/images/home/baron.jpg" alt="Барон" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="placeholder-image" style="display: none;">🐕 Барон</div>
                 </div>
                 <div class="pet-showcase-info">
@@ -100,7 +100,7 @@
             
             <div class="pet-showcase-card">
                 <div class="pet-showcase-photo">
-                    <img src="/static/images/home/pet-simba.jpg" alt="Симба" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="/static/images/home/simba.jpg" alt="Симба" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="placeholder-image" style="display: none;">🐱 Симба</div>
                 </div>
                 <div class="pet-showcase-info">
@@ -112,7 +112,7 @@
             
             <div class="pet-showcase-card">
                 <div class="pet-showcase-photo">
-                    <img src="/static/images/home/pet-laska.jpg" alt="Ласка" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="/static/images/home/lacka.jpg" alt="Ласка" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="placeholder-image" style="display: none;">🐕 Ласка</div>
                 </div>
                 <div class="pet-showcase-info">
