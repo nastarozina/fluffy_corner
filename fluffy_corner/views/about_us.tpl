@@ -43,10 +43,22 @@
     <div class="about-section">
         <h2>Как мы работаем</h2>
         <div class="photo-grid">
-            <div class="photo-placeholder">[Фото приюта]</div>
-            <div class="photo-placeholder">[Вольеры для собак]</div>
-            <div class="photo-placeholder">[Кошачья комната]</div>
-            <div class="photo-placeholder">[Ветеринарный кабинет]</div>
+            <div class="photo-placeholder">
+                <img src="/static/images/about_us/priut.jpg" alt="Фото приюта" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-image" style="display: none;">[Фото приюта]</div>
+            </div>
+            <div class="photo-placeholder">
+                <img src="/static/images/about_us/volier.jpg" alt="Вольеры для собак" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-image" style="display: none;">[Вольеры для собак]</div>
+            </div>
+            <div class="photo-placeholder">
+                <img src="/static/images/about_us/catroom.jpg" alt="Кошачья комната" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-image" style="display: none;">[Кошачья комната]</div>
+            </div>
+            <div class="photo-placeholder">
+                <img src="/static/images/about_us/veterinar_cab.jpg" alt="Ветеринарный кабинет" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-image" style="display: none;">[Ветеринарный кабинет]</div>
+            </div>
         </div>
         
         <h3>Наша деятельность:</h3>
@@ -58,28 +70,37 @@
         </ul>
     </div>
     
-    <!-- Наша команда ) -->
+    <!-- Наша команда -->
     <div class="about-section">
         <h2>Наша команда</h2>
         <p>За каждым спасением стоят люди. Наша команда — это профессионалы, которые любят свое дело и посвящают жизнь помощи животным.</p>
         
         <div class="team-grid">
             <div class="team-card">
-                <div class="team-photo-placeholder">Основатель</div>
+                <div class="team-photo-placeholder">
+                    <img src="/static/images/about_us/nastya.jpg" alt="Рожина Анастасия" class="team-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-image" style="display: none;">Основатель</div>
+                </div>
                 <h4>Рожина Анастасия</h4>
                 <div class="position">Основатель приюта</div>
                 <div class="description">Создала приют в 2018 году, когда спасла первых трех щенков. С тех пор ее жизнь полностью посвящена помощи бездомным животным. Лично участвует в сложных спасениях и координирует всю работу приюта.</div>
             </div>
             
             <div class="team-card">
-                <div class="team-photo-placeholder">Кинолог</div>
+                <div class="team-photo-placeholder">
+                    <img src="/static/images/about_us/kirill.jpg" alt="Поручиков Кирилл" class="team-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-image" style="display: none;">Кинолог</div>
+                </div>
                 <h4>Поручиков Кирилл</h4>
                 <div class="position">Кинолог</div>
                 <div class="description">Профессиональный кинолог с 10-летним стажем. Работает с собаками, имеющими психологические травмы, помогает им адаптироваться и готовит к жизни в семье. Благодаря Кириллу даже самые сложные собаки находят общий язык с людьми.</div>
             </div>
             
             <div class="team-card">
-                <div class="team-photo-placeholder">Ветеринар</div>
+                <div class="team-photo-placeholder">
+                    <img src="/static/images/about_us/anya.jpg" alt="Коваленко Анна" class="team-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-image" style="display: none;">Ветеринар</div>
+                </div>
                 <h4>Коваленко Анна</h4>
                 <div class="position">Ветеринарный врач</div>
                 <div class="description">Ветеринарный врач высшей категории. Специализируется на хирургии и лечении тяжелобольных животных. Провела более 500 успешных операций. Анна возвращает к жизни даже тех, от кого отказались другие ветеринары.</div>
@@ -93,8 +114,14 @@
     <div class="about-section">
         <h2>Как вы можете помочь</h2>
         <div class="photo-grid">
-            <div class="photo-placeholder">[Волонтеры с собаками]</div>
-            <div class="photo-placeholder">[Кормление кошек]</div>
+            <div class="photo-placeholder">
+                <img src="/static/images/about_us/volonter.jpg" alt="Волонтеры с собаками" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-image" style="display: none;">[Волонтеры с собаками]</div>
+            </div>
+            <div class="photo-placeholder">
+                <img src="/static/images/about_us/kormcat.jpg" alt="Кормление кошек" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-image" style="display: none;">[Кормление кошек]</div>
+            </div>
         </div>
         
         <h3>Мы всегда рады любой помощи:</h3>

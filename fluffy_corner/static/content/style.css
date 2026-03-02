@@ -698,3 +698,110 @@ hr {
         min-width: 100px;
     }
 }
+
+/* Дополнительные стили для фото команды */
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #643E78;
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-photo-placeholder .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+}
+/* Стили для изображений в photo-placeholder - фото внутри фиолетовых рамок */
+.photo-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    border: 3px dashed #643E78;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 16px;
+    text-align: center;
+    padding: 0; /* Убираем внутренние отступы */
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягивает фото на всю область */
+    display: block;
+    border: none;
+    border-radius: 12px; /* Чуть меньше, чем у родителя, чтобы не перекрывать рамку */
+}
+
+.photo-placeholder .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+}
+
+/* Для больших фото */
+.photo-placeholder.large {
+    height: 300px;
+    grid-column: span 2;
+    padding: 0;
+}
+
+/* Стили для фото команды (круглые, без изменений) */
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #643E78;
+    position: relative;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+}
+
+.team-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-photo-placeholder .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+}
