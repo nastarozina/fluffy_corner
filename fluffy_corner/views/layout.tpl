@@ -13,7 +13,7 @@
     <div class="header-content">
         <div class="logo-container">
             <a href="/">
-                <img class="logo" src="/static/images/лого.png">
+                <img class="logo" src="/static/images/logo.png">
             </a>
             <a href="/" class="navbar-brand">Приют для животных<br>"Пушистый уголок"</a>
         </div>
