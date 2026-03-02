@@ -22,3 +22,17 @@
             <img src="/static/images/card-donate.png" alt="Оплата картой">
         </div>
     </div>
+     <div class="donate-top-left">
+        <div class="donate-header-image-left">
+            <img src="/static/images/ewallets.png" alt="Электронные кошельки">
+        </div>
+        <div class="donate-section">
+            <h2>📱 Электронные кошельки</h2>
+            <ul>
+                <li><strong>ЮMoney (Яндекс.Деньги):</strong> 4100123456789012</li>
+                <li><strong>QIWI Кошелек:</strong> +7 (999) 123-45-67</li>
+                <li><strong>WebMoney:</strong> R123456789012</li>
+            </ul>
+            <p class="note-small">Комиссия при переводе зависит от вашего кошелька</p>
+        </div>
+    </div>
