@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Приют "Пушистый уголок"</title>
     <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
-    <link rel="stylesheet" type="text/css" href="/static/content/style_for_pet.css"/>
     <link rel="icon" href="/static/images/favicon.ico">
 </head>
 
@@ -14,7 +13,7 @@
     <div class="header-content">
         <div class="logo-container">
             <a href="/">
-                <img class="logo" src="static\images\лого.png">
+                <img class="logo" src="/static/images/лого.png">
             </a>
             <a href="/" class="navbar-brand">Приют для животных<br>"Пушистый уголок"</a>
         </div>
@@ -44,10 +43,10 @@
             </p>
             <div class="icons">
                 <a href="https://t.me/loudlig" target="_blank">
-                    <img class="icon" src="static\images\icon-telegram.png">
+                    <img class="icon" src="/static/images/icon-telegram.png">
                 </a>
                 <a href="https://vk.com/id624802621" target="_blank">
-                    <img class="icon" src="static\images\icon-vk.png">
+                    <img class="icon" src="/static/images/icon-vk.png">
                 </a>
             </div>
             <hr>

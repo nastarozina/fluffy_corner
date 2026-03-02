@@ -3,8 +3,11 @@ Routes and views for the bottle application.
 """
 
 
-from bottle import route, view, template, redirect
+from bottle import route, view, template, redirect, abort
 import json
+
+with open(r"static\pets.json", "r", encoding="utf-8-sig") as pet_data:
+    pets = json.load(pet_data)
 
 @route('/')
 @view('home')
@@ -17,11 +20,9 @@ def index():
 @route('/pets')
 @view('find_pet')
 def home():
-    with open(r"static\pets.json", "r", encoding="utf-8-sig") as pet_data:
-            data = json.load(pet_data)
     return dict(
-        title = 'Питомцы',
-        pets=data
+        title='Питомцы',
+        pets=pets
     )
 @route('/needs')
 @view('needs')
@@ -53,3 +54,16 @@ def about():
 @view('donate')
 def needs():
     return dict(title='Помощь')
+
+@route('/pets/<pet_id:int>')
+@view('pet')
+def pet_page(pet_id):
+    pet = next((p for p in pets if p['id'] == pet_id), None)
+
+    if not pet:
+        abort(404, "Питомец не найден")
+
+    return dict(
+        pet=pet,
+        title=pet['name']
+    )
