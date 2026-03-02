@@ -151,13 +151,6 @@ hr {
 
 
 /* Стили для страницы "Что нужно нашему приюту" */
-.needs-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 40px;
-    flex: 1;
-    position: relative;
-}
 
 .needs-sections-container {
     display: flex;
@@ -238,12 +231,7 @@ hr {
 }
 
 /* ===== СТИЛИ ДЛЯ СЧАСТЛИВЫХ ИСТОРИЙ ===== */
-.happy-stories-page {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: 'baseFont', sans-serif;
-}
+
 
 .stories-intro {
     background: linear-gradient(135deg, #f0e6ff 0%, #e6d9ff 100%);

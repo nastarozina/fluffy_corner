@@ -68,13 +68,6 @@
 
 <style>
 /* === Стили для страницы donate-page (аналогично needs-page) === */
-.donate-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 40px;
-    flex: 1;
-    position: relative;
-}
 
 .donate-intro {
     background-color: #f8f9fa;
