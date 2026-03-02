@@ -23,13 +23,13 @@
     </div>
 
     <div class="needs-header-image">
-        <img src="/static/images/corm.png" alt="Помощь приюту">
+        <img src="/static/images/needs/corm.png" alt="Помощь приюту">
     </div>
 
 </div>
 <div class="needs-top-left">
     <div class="needs-header-image-left">
-            <img src="/static/images/megapt.png" alt="Медикаменты">
+            <img src="/static/images/needs/megapt.png" alt="Медикаменты">
     </div>
     <div class="needs-section">
         <h2>💊 Медикаменты</h2>
@@ -57,13 +57,13 @@
         </ul>
     </div>
     <div class="needs-header-image-left">
-            <img src="/static/images/optimize.png" alt="Медикаменты">
+            <img src="/static/images/needs/optimize.png" alt="Медикаменты">
     </div>
 </div>
 <div class="needs-top-left">
 
     <div class="needs-header-image-left">
-            <img src="/static/images/ugruski.png" alt="Медикаменты">
+            <img src="/static/images/needs/ugruski.png" alt="Медикаменты">
     </div>
     <div class="needs-section">
         <h2> Амуниция и предметы уюта</h2>
@@ -95,4 +95,5 @@
 </div>
 <div class="needs-contact">
     <p class="note">🌟 Если вы хотите привезти что-то из списка или помочь иным способом, пожалуйста, свяжитесь с нами по телефону горячей линии. Мы всегда рады новой помощи!</p>
+</div>
 </div>
