@@ -17,3 +17,9 @@ def home():
 @view('needs')
 def needs():
     return dict(title='Нужды приютаа!')
+
+
+@route('/donate')
+@view('donate')
+def needs():
+    return dict(title='Нужды приютаа!')
