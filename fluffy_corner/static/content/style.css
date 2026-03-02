@@ -2,6 +2,22 @@
     font-family: 'baseFont';
     src: url('/static/fonts/SofiaSans-VariableFont_wght.ttf') format('truetype');
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.header-content {
+    width: 100%;
+    padding: 0 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
 body {
     font-family: 'baseFont';
     margin: 0;
@@ -46,7 +62,7 @@ body {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    margin-right: 30px
+    margin-right: 58px
 }
 .logo {
     width: 70px;
@@ -59,13 +75,13 @@ body {
 }
 .head-p {
     font-size: 55px;
-    margin-left: 20px
+    margin-left: 70px;
 }
 
 .footer {
     background-color: #181e21;
     color: white;
-    padding-left: 20px;
+    padding: 0px 75px;
     margin-top: auto;
     box-shadow: 0 -7px 10px rgba(0, 0, 0, 0.3);
 }
