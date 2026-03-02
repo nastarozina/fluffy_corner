@@ -1,0 +1,85 @@
+.needs-sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+
+/* Базовые стили для блоков */
+.needs-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid #eee;
+    margin-bottom: 45px; /* Добавили отступ снизу */
+}
+    /* Нечетные блоки - СЛЕВА */
+    .needs-section:nth-child(odd) {
+        margin-left: 0;
+        margin-right: auto;
+        background-color: #f9f5ff; /* Светло-фиолетовый для левых */
+    }
+
+    /* Четные блоки - СПРАВА */
+    .needs-section:nth-child(even) {
+        margin-left: auto;
+        margin-right: 0;
+        background-color: #e6f0ff; /* Светло-голубой для правых */
+    }
+.needs-top {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px
+}
+
+    .needs-top .needs-section {
+        flex: 1
+    }
+
+.needs-header-image {
+    flex: 0 0 360px
+}
+
+    .needs-header-image img {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0,0,0,.15);
+        transform: rotate(2deg);
+        transition: .4s ease;
+    }
+
+        .needs-header-image img:hover {
+            transform: rotate(0) scale(1.05);
+        }
+
+.needs-top-left {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px
+}
+    .needs-top-left .needs-section {
+        flex: 1
+    }
+
+.needs-header-image-left {
+    flex: 0 0 360px
+}
+
+    .needs-header-image-left img {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0,0,0,.15);
+        transform: rotate(-2deg);
+        transition: .4s ease;
+    }
+
+        .needs-header-image-left img:hover {
+            transform: rotate(0) scale(1.05);
+        }
