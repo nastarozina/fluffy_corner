@@ -4,11 +4,20 @@ Routes and views for the bottle application.
 
 from bottle import route, view, redirect
 
+# Главная страница (теперь ведет на home.tpl)
 @route('/')
+@view('home')
+def index():
+    """Renders the home page."""
+    return dict(
+        title = 'Главная'
+    )
+
+# Страница питомцев (теперь доступна по /pets)
 @route('/pets')
 @view('find_pet')
-def home():
-    """Renders the home page."""
+def pets():
+    """Renders the pets page."""
     return dict(
         title = 'Питомцы'
     )
