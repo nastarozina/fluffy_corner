@@ -6,7 +6,6 @@ Routes and views for the bottle application.
 from bottle import route, view, template, redirect
 import json
 
-# Главная страница (теперь ведет на home.tpl)
 @route('/')
 @view('home')
 def index():
@@ -15,7 +14,6 @@ def index():
         title = 'Главная'
     )
 
-# Страница питомцев (теперь доступна по /pets)
 @route('/pets')
 @view('find_pet')
 def home():
@@ -50,14 +48,8 @@ def about():
     return dict(
         title = 'О нас'
     )
-    
-@route('/needs')
-@view('needs')
-def needs():
-    return dict(title='Нужды приютаа!')
 
-
-@route('/donate')
+@route('/help')
 @view('donate')
 def needs():
-    return dict(title='Нужды приютаа!')
+    return dict(title='Помощь')

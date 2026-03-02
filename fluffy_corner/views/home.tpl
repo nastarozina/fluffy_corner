@@ -86,49 +86,7 @@
             <span class="quote-author fade-in">— Антуан де Сент-Экзюпери</span>
         </div>
     </section>
-    
-    <!-- Они ждут свой дом с анимацией карточек -->
-    <section class="featured-pets">
-        <h2 class="animate-title">Они ждут свой дом</h2>
-        <div class="pets-showcase">
-            <div class="pet-showcase-card animate-card" style="animation-delay: 0.1s;">
-                <div class="pet-showcase-photo hover-scale">
-                    <img src="/static/images/home/baron.jpg" alt="Барон" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="placeholder-image" style="display: none;">🐕 Барон</div>
-                </div>
-                <div class="pet-showcase-info">
-                    <h3 class="pulse-text">Барон</h3>
-                    <p>Благородный пёс с добрым сердцем. Любит долгие прогулки и обниматься.</p>
-                    <a href="/pets#baron" class="pet-showcase-link slide-link">Познакомиться →</a>
-                </div>
-            </div>
-            
-            <div class="pet-showcase-card animate-card" style="animation-delay: 0.2s;">
-                <div class="pet-showcase-photo hover-scale">
-                    <img src="/static/images/home/simba.jpg" alt="Симба" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="placeholder-image" style="display: none;">🐱 Симба</div>
-                </div>
-                <div class="pet-showcase-info">
-                    <h3 class="pulse-text">Симба</h3>
-                    <p>Рыжий кот с львиным характером. Ласковый, игривый, обожает сидеть на руках.</p>
-                    <a href="/pets#simba" class="pet-showcase-link slide-link">Познакомиться →</a>
-                </div>
-            </div>
-            
-            <div class="pet-showcase-card animate-card" style="animation-delay: 0.3s;">
-                <div class="pet-showcase-photo hover-scale">
-                    <img src="/static/images/home/lacka.jpg" alt="Ласка" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="placeholder-image" style="display: none;">🐕 Ласка</div>
-                </div>
-                <div class="pet-showcase-info">
-                    <h3 class="pulse-text">Ласка</h3>
-                    <p>Нежная и преданная собачка. Идеальный компаньон для спокойных вечеров.</p>
-                    <a href="/pets#laska" class="pet-showcase-link slide-link">Познакомиться →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+
     <!-- Коротко о главном с анимацией цифр -->
     <section class="highlights">
         <div class="highlight-card animate-count">

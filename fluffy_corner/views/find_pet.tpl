@@ -1,6 +1,6 @@
 % rebase('layout.tpl', title=title, pets=pets)
 
-<p class="head-p">{{ title }}</p>
+<h1 class="header-h1">{{ title }}</h1>
 <div class="pets-container">
 % for pet in pets:
 	<div class="block">

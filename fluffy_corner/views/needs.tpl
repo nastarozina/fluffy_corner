@@ -1,7 +1,7 @@
 % rebase('layout.tpl', title=title)
 <div class="needs-page">
     
-    <h1>Что нужно нашему приюту</h1>
+    <h1 class="header-h1">Что нужно нашему приюту</h1>
     
     <div class="needs-intro">
         <p>Каждый день мы заботимся о более чем 50 подопечных. Чтобы наши хвостики были сыты, здоровы и счастливы, нам постоянно требуется помощь. Мы будем благодарны за любую поддержку!</p>
@@ -89,22 +89,6 @@
         <div class="payment-details">
             <p><strong>Карта Сбербанк:</strong> 1234 5678 9012 3456</p>
             <p><strong>Яндекс.Деньги:</strong> 4100123456789012</p>
-        </div>
-    </div>
-    <div class="needs-side-button">
-        <div class="button-with-arrow">
-            <!-- Волнистая стрелка с треугольником в конце -->
-            <div class="wavy-arrow">
-                <svg viewBox="0 0 180 60" width="180" height="60">
-                    <!-- Волнистая линия от левого края почти до правого -->
-                    <path d="M10,30 Q40,15 70,30 T130,30" stroke="#FF6B6B" stroke-width="4" fill="none" stroke-dasharray="6 4" />
-                    <!-- Треугольник на конце линии (справа) -->
-                    <polygon points="145,30 130,22 130,38" fill="#FF6B6B" />
-                    <!-- Текст "нажми" слева -->
-                    <text x="20" y="18" fill="#FF6B6B" font-size="12" font-weight="bold">нажми</text>
-                </svg>
-            </div>
-            <a href="/donate" class="button">Перевести деньги</a>
         </div>
     </div>
 </div>

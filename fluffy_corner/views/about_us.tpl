@@ -2,7 +2,7 @@
 
 <div class="about-page">
     
-    <h1>О нашем приюте</h1>
+    <h1 class="header-h1">О нашем приюте</h1>
     
     <!-- Основная информация -->
     <div class="about-section">
