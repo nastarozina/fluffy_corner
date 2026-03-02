@@ -1,4 +1,5 @@
 % rebase('layout.tpl', title=title)
+<link rel="stylesheet" type="text/css" href="/static/content/style_needs.css" />
 <div class="needs-page">
     
     <h1 class="header-h1">Что нужно нашему приюту</h1>
