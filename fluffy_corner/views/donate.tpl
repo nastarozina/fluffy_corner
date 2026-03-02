@@ -50,7 +50,7 @@
     <div class="donate-qr-block">
         <div class="qr-container">
             <div class="qr-code">
-                <img src="/static/images/qr-pay.png" alt="QR-код для оплаты">
+                <img src="/static/images/QR.png" alt="QR-код для оплаты">
                 <p>Наведите камеру для оплаты</p>
             </div>
             <div class="qr-description">
