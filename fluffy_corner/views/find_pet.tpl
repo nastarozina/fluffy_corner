@@ -6,7 +6,10 @@
 	<div class="block">
 		<img class="image_pet" src="{{ pet['pictures'][0]['source'] }}">
 		<a class="name_pet" href="/pets/{{ pet['id']}}">{{pet['name']}}</a>
-		<p class="info_pet">Дата рождения: {{pet['birth-date']}}<br>{{pet['gender']}}</p>
+		<p class="info_pet">
+			<span class="birth">Дата рождения: {{pet['birth-date']}}</span>
+			<span class="gender">{{pet['gender']}}</span>
+		</p>
 	</div>
 % end
 </div>
