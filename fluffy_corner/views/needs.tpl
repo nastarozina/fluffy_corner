@@ -44,6 +44,7 @@
     </div>
     
 </div>
+<div class="needs-top">
     <div class="needs-section">
         <h2>🧼 Хозяйственные товары</h2>
         <ul>
@@ -54,7 +55,15 @@
             <li>Стиральный порошок (гипоаллергенный)</li>
         </ul>
     </div>
+    <div class="needs-header-image-left">
+            <img src="/static/images/optimize.png" alt="Медикаменты">
+    </div>
+</div>
+<div class="needs-top-left">
 
+    <div class="needs-header-image-left">
+            <img src="/static/images/ugruski.png" alt="Медикаменты">
+    </div>
     <div class="needs-section">
         <h2> Амуниция и предметы уюта</h2>
         <ul>
@@ -65,7 +74,9 @@
             <li>Переноски и клетки (для временного содержания)</li>
         </ul>
     </div>
+</div>
 
+<div class="needs-top">
     <div class="needs-section">
         <h2>🤝 Финансовая помощь</h2>
         <p>Вы всегда можете поддержать нас материально. Средства идут на:</p>
@@ -80,8 +91,23 @@
             <p><strong>Яндекс.Деньги:</strong> 4100123456789012</p>
         </div>
     </div>
-   
-    <div class="needs-contact">
-        <p class="note">🌟 Если вы хотите привезти что-то из списка или помочь иным способом, пожалуйста, свяжитесь с нами по телефону горячей линии. Мы всегда рады новой помощи!</p>
+    <div class="needs-side-button">
+        <div class="button-with-arrow">
+            <!-- Волнистая стрелка с треугольником в конце -->
+            <div class="wavy-arrow">
+                <svg viewBox="0 0 180 60" width="180" height="60">
+                    <!-- Волнистая линия от левого края почти до правого -->
+                    <path d="M10,30 Q40,15 70,30 T130,30" stroke="#FF6B6B" stroke-width="4" fill="none" stroke-dasharray="6 4" />
+                    <!-- Треугольник на конце линии (справа) -->
+                    <polygon points="145,30 130,22 130,38" fill="#FF6B6B" />
+                    <!-- Текст "нажми" слева -->
+                    <text x="20" y="18" fill="#FF6B6B" font-size="12" font-weight="bold">нажми</text>
+                </svg>
+            </div>
+            <a href="/donate" class="button">Перевести деньги</a>
+        </div>
     </div>
+</div>
+<div class="needs-contact">
+    <p class="note">🌟 Если вы хотите привезти что-то из списка или помочь иным способом, пожалуйста, свяжитесь с нами по телефону горячей линии. Мы всегда рады новой помощи!</p>
 </div>

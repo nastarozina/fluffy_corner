@@ -422,3 +422,100 @@ hr {
         font-size: 22px;
     }
 }
+
+
+/*   Knopka donate -----------------------------------*/
+
+
+/*   Knopka donate -----------------------------------*/
+
+.needs-contact {
+    transform: translateY(60px);
+}
+
+.button.square {
+    width: 90px;
+    height: 90px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 32px;
+}
+
+.needs-side-button {
+    flex: 0 0 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Контейнер для кнопки и стрелки */
+.button-with-arrow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    transform: translate(-20px, 200px);
+}
+
+/* Стили для волнистой стрелки */
+.wavy-arrow {
+    animation: bounce 1s ease-in-out infinite alternate;
+    margin-left: -30px;
+}
+
+.wavy-arrow svg {
+    display: block;
+    width: 150px;
+    height: 60px;
+}
+
+/* Анимация для привлечения внимания */
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+/* Дополнительные стили для кнопки */
+.needs-side-button .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.needs-side-button .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Исправление позиционирования последнего блока */
+.needs-top:last-of-type {
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+.needs-sections-container {
+    padding-bottom: 50px;
+    min-height: 800px;
+}
+
+.needs-top:last-of-type .needs-section {
+    margin-bottom: 60px;
+}
+
+.needs-top:last-of-type .needs-side-button {
+    transform: translateY(0);
+    margin-top: 0;
+}
