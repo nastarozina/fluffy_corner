@@ -50,3 +50,14 @@ def about():
     return dict(
         title = 'О нас'
     )
+    
+@route('/needs')
+@view('needs')
+def needs():
+    return dict(title='Нужды приютаа!')
+
+
+@route('/donate')
+@view('donate')
+def needs():
+    return dict(title='Нужды приютаа!')

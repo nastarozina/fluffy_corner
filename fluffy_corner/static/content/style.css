@@ -29,15 +29,48 @@ body {
     display: flex;
     gap: 70px;
     padding-left: 0;
-    padding-right: 40px
+    padding-right: 40px;
 }
+
 .navbar a {
     color: black;
     font-size: 20px;
     text-decoration: none;
+    position: relative;
+    padding: 5px 0;  /* Отступы для подчеркивания */
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
+
+/* Эффект подчеркивания */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #643E78;
+    transition: width 0.3s ease;
+}
+
+/* При наведении подчеркивание расширяется от центра */
+.navbar a:hover::after {
+    width: 100%;
+}
+
 .navbar a:hover {
-    color: cornflowerblue;
+    color: #643E78;
+}
+
+
+.navbar a.active {
+    color: #643E78;
+}
+
+.navbar a.active::after {
+    width: 100%;
 }
 .navbar-brand {
     color: black;
@@ -62,7 +95,35 @@ body {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    margin-right: 58px
+    margin-right: 58px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.button:hover::after {
+    left: 100%;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(100, 62, 120, 0.4);
+}
+
+.button:active {
+    transform: scale(0.95);  /* Эффект нажатия */
+
 }
 .logo {
     width: 70px;
@@ -116,6 +177,105 @@ hr {
 .icon:hover {
     filter: grayscale(100%) brightness(70%);
 }
+
+
+/* Стили для страницы "Что нужно нашему приюту" */
+.needs-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    flex: 1;
+    position: relative;
+}
+
+.needs-sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+
+/* Базовые стили для блоков */
+.needs-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid #eee;
+    margin-bottom: 45px; /* Добавили отступ снизу */
+}
+
+/* Нечетные блоки - СЛЕВА */
+.needs-section:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+    background-color: #f9f5ff;  /* Светло-фиолетовый для левых */
+}
+
+/* Четные блоки - СПРАВА */
+.needs-section:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+    background-color: #e6f0ff;  /* Светло-голубой для правых */
+}
+
+/* --------------------------------------------------*/
+
+.needs-top{display:flex;
+    gap:40px;
+    align-items:flex-start;
+    margin-bottom:40px
+}
+.needs-top .needs-section{flex:1}
+
+.needs-header-image{flex:0 0 360px}
+.needs-header-image img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  transform:rotate(2deg);
+  transition:.4s ease;
+}
+
+.needs-header-image img:hover{
+  transform:rotate(0) scale(1.05);
+}
+
+/* --------------------------------------------------*/
+
+.needs-top-left{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  margin-bottom:40px
+}
+
+.needs-top-left .needs-section{flex:1}
+
+.needs-header-image-left{flex:0 0 360px}
+
+.needs-header-image-left img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  transform:rotate(-2deg);
+  transition:.4s ease;
+}
+
+.needs-header-image-left img:hover{
+  transform:rotate(0) scale(1.05);
+}
+/* --------------------------------------------------*/
+
+.needs-page h1 {
+    font-size: 48px;
+    color: #643E78;
+    margin-bottom: 20px;
+
 /* ===== СТИЛИ ДЛЯ СЧАСТЛИВЫХ ИСТОРИЙ ===== */
 .happy-stories-page {
     max-width: 1100px;
@@ -474,6 +634,264 @@ hr {
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 15px;
+}
+
+.needs-page h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: cornflowerblue;
+    border-radius: 2px;
+}
+
+.needs-intro {
+    background-color: #f8f9fa;
+    padding: 25px 30px;
+    border-radius: 20px;
+    margin: 30px 0 40px 0;
+    border-left: 5px solid #643E78;
+}
+
+.needs-intro p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+
+.needs-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(100, 62, 120, 0.15);
+}
+
+.needs-section h2 {
+    font-size: 32px;
+    color: #181e21;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.needs-section h2::before {
+    content: '🐾';
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+.needs-section p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.needs-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.needs-section ul li {
+    font-size: 17px;
+    color: #555;
+    padding: 10px 0 10px 35px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.needs-section ul li:last-child {
+    border-bottom: none;
+}
+
+.needs-section ul li::before {
+    content: '✓';
+    color: #643E78;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+}
+
+.payment-details {
+    background-color: #f3f0f5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.payment-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #181e21;
+}
+
+.payment-details strong {
+    color: #643E78;
+    min-width: 140px;
+    display: inline-block;
+}
+
+.needs-contact {
+    margin: 50px 0 30px 0;
+}
+
+.needs-contact .note {
+    background: linear-gradient(135deg, #643E78 0%, #8e6aa3 100%);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(100, 62, 120, 0.3);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .needs-page {
+        padding: 20px;
+    }
+    
+    .needs-page h1 {
+        font-size: 36px;
+    }
+    
+    .needs-section h2 {
+        font-size: 26px;
+    }
+    
+    .needs-intro p,
+    .needs-section p,
+    .needs-section ul li {
+        font-size: 16px;
+    }
+    
+    .payment-details p {
+        font-size: 16px;
+    }
+    
+    .payment-details strong {
+        min-width: 120px;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .needs-page h1 {
+        font-size: 28px;
+    }
+    
+    .needs-section {
+        padding: 15px;
+    }
+    
+    .needs-section h2 {
+        font-size: 22px;
+    }
+}
+
+
+/*   Knopka donate -----------------------------------*/
+
+
+/*   Knopka donate -----------------------------------*/
+
+.needs-contact {
+    transform: translateY(60px);
+}
+
+.button.square {
+    width: 90px;
+    height: 90px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 32px;
+}
+
+.needs-side-button {
+    flex: 0 0 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Контейнер для кнопки и стрелки */
+.button-with-arrow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    transform: translate(-20px, 200px);
+}
+
+/* Стили для волнистой стрелки */
+.wavy-arrow {
+    animation: bounce 1s ease-in-out infinite alternate;
+    margin-left: -30px;
+}
+
+.wavy-arrow svg {
+    display: block;
+    width: 150px;
+    height: 60px;
+}
+
+/* Анимация для привлечения внимания */
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+/* Дополнительные стили для кнопки */
+.needs-side-button .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.needs-side-button .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Исправление позиционирования последнего блока */
+.needs-top:last-of-type {
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    margin-top: 150px;
+    padding-top: 50px;
+}
+
+.needs-sections-container {
+    padding-bottom: 50px;
+    min-height: 800px;
+}
+
+.needs-top:last-of-type .needs-section {
+    margin-bottom: 60px;
+}
+
+.needs-top:last-of-type .needs-side-button {
+    transform: translateY(0);
+    margin-top: 0;
 }
 
 .about-page h1:after {
@@ -1234,4 +1652,3 @@ hr {
         font-size: 18px;
     }
 }
-

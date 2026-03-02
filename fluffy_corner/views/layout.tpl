@@ -29,6 +29,10 @@
     </header>
 
     <div class="container body-content">
+      
+    </div>
+
+
         {{!base}}
     </div>
     <footer class="footer">
