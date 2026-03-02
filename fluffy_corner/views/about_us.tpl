@@ -1,5 +1,5 @@
 % rebase('layout.tpl', title=title)
-
+<link rel="stylesheet" type="text/css" href="/static/content/style_about-us.css"/>
 <div class="about-page">
     
     <h1 class="header-h1">О нашем приюте</h1>

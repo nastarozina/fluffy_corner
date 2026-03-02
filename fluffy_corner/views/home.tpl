@@ -1,5 +1,5 @@
 % rebase('layout.tpl', title='Главная')
-
+<link rel="stylesheet" type="text/css" href="/static/content/style_home-page.css"/>
 <div class="home-page">
     
     <!-- Герой-секция с анимацией появления -->

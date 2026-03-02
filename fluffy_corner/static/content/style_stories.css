@@ -123,16 +123,6 @@
         position: relative;
         padding-left: 20px;
     }
-
-        .story-text p:before {
-            content: '•';
-            color: #643E78;
-            font-size: 24px;
-            position: absolute;
-            left: 0;
-            top: -5px;
-        }
-
         .story-text p strong {
             color: #643E78;
             font-size: 18px;
