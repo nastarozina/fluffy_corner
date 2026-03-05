@@ -43,6 +43,7 @@
     cursor: pointer;
     margin-top: 170px
 }
-footer {
-   
+
+.nav-btn:hover {
+    transform: scale(1.05);
 }
