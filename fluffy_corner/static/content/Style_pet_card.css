@@ -2,39 +2,47 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
+    gap: 190px;
 }
 
-/* Информация слева */
 .pet-info {
-    flex: 1;
-    font-size: 22px;
-    margin-left: 73px;
+    flex: 0.9;
+    margin-left: 70px;
     flex-wrap: wrap;
+    text-align: justify
 }
 
-/* Галерея справа */
+.info-text {
+    font-size: 24px
+}
+
+.description-text {
+    font-size: 20px;
+    margin-top: 35px
+}
+
 .gallery {
     display: flex;
-    flex-direction: column;
+    flex: 1;
     gap: 15px;
-    width: 300px;
 }
 
-/* Фото */
 .pet-photo {
-    width: 100%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
     border-radius: 15px;
 }
-.pet-page {
-    display: flex;
-    gap: 40px;
-}
 
-.gallery {
-    order: 2; /* отправляем вправо */
+.nav-btn {
+    width: 40px;
+    height: fit-content;
+    font-size: 24px;
+    color: #643E78;
+    border: 1.5px solid black;
+    cursor: pointer;
+    margin-top: 170px
 }
-
-.pet-info {
-    order: 1; /* оставляем слева */
+footer {
+   
 }

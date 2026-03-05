@@ -76,7 +76,7 @@
     margin: 30px 0 40px 0;
     border-left: 5px solid #643E78;
 }
-
+ы
 .donate-intro p {
     font-size: 20px;
     line-height: 1.6;
