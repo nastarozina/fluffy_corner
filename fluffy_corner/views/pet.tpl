@@ -8,7 +8,7 @@
         <p class="info-text"><strong>Дата рождения:</strong> {{ pet['birth-date'] }}</p>
         <p class="info-text"><strong>Пол:</strong> {{ pet['gender'] }}</p>
         <p class="description-text">{{ pet['description'] }}</p>
-        <script src="/static/scripts/for-popup-script.js"></script>
+        <script src="/static/scripts/popup-script.js"></script>
         <a class="auxiliary-link" href="#" onclick="openPopup()">
             <span>Как забрать питомца</span>
             <img src="/static/images/arrow.png">
