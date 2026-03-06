@@ -1,5 +1,5 @@
 % rebase('layout.tpl', title=title, pets=pets)
-<link rel="stylesheet" type="text/css" href="/static/content/style_for_pet.css"/>
+<link rel="stylesheet" type="text/css" href="/static/content/style_pet-catalog.css"/>
 <h1 class="header-h1">{{ title }}</h1>
 <div class="pets-container">
 % for pet in pets:
