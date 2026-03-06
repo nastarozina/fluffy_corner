@@ -19,7 +19,7 @@
     font-size: 27px;
     text-decoration: none;
     margin-top: 14px;
-    font-weight: 900
+    font-weight: 860
 }
 .name_pet:hover {
     color: cornflowerblue;
@@ -30,8 +30,8 @@
 }
 
 .info_pet span {
-        display: block;
-        font-size: 20px
+    display: block;
+    font-size: 20px
 }
 
 .gender {
