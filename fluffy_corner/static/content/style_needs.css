@@ -3,8 +3,15 @@
     flex-direction: column;
     gap: 30px;
     position: relative;
+    
+    
 }
-
+.needs-conten{
+    max-width: 1500px;
+    margin: 0 auto;
+    
+    
+}
 
 /* Базовые стили для блоков */
 .needs-section {
@@ -16,20 +23,21 @@
     width: 100%;
     max-width: 700px;
     border: 1px solid #eee;
-    margin-bottom: 45px; /* Добавили отступ снизу */
+    margin-bottom: 45px; 
+
 }
-    /* Нечетные блоки - СЛЕВА */
+    /* Нечетные блоки слева */
     .needs-section:nth-child(odd) {
-        margin-left: 0;
+        margin-left: auto;
         margin-right: auto;
-        background-color: #f9f5ff; /* Светло-фиолетовый для левых */
+        background-color: #f9f5ff; 
     }
 
-    /* Четные блоки - СПРАВА */
+    /* Четные блоки  справа */
     .needs-section:nth-child(even) {
         margin-left: auto;
-        margin-right: 0;
-        background-color: #e6f0ff; /* Светло-голубой для правых */
+        margin-right: auto;
+        background-color: #e6f0ff; 
     }
 .needs-top {
     display: flex;
@@ -63,6 +71,7 @@
     gap: 40px;
     align-items: flex-start;
     margin-bottom: 40px
+    
 }
     .needs-top-left .needs-section {
         flex: 1
@@ -185,72 +194,28 @@
         box-shadow: 0 5px 15px rgba(100, 62, 120, 0.3);
     }
 
-
-.button.square {
-    width: 90px;
-    height: 90px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    font-size: 32px;
-}
-
-.needs-side-button {
-    flex: 0 0 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-/* Анимация для привлечения внимания */
-@keyframes bounce {
-    from {
-        transform: translateY(0);
+/*Optimizat*/
+@media (max-width: 900px) {
+    .needs-top,
+    .needs-top-left {
+        flex-direction: column; 
     }
-
-    to {
-        transform: translateY(-5px);
+    
+    
+    .needs-top .needs-section {
+        order: 1; 
     }
-}
-
-/* Дополнительные стили для кнопки */
-.needs-side-button .button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-    .needs-side-button .button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    
+    .needs-top .needs-header-image {
+        order: 2;  
     }
-
-.needs-top:last-of-type {
-    margin-bottom: 100px;
-    position: relative;
-    z-index: 1;
-    margin-top: 150px;
-    padding-top: 50px;
-}
-
-.needs-sections-container {
-    padding-bottom: 50px;
-    min-height: 800px;
-}
-
-.needs-top:last-of-type .needs-section {
-    margin-bottom: 60px;
-}
-
-.needs-top:last-of-type .needs-side-button {
-    transform: translateY(0);
-    margin-top: 0;
+    
+   
+    .needs-top-left .needs-header-image-left {
+        order: 2;  
+    }
+    
+    .needs-top-left .needs-section {
+        order: 1;  
+    }
 }
