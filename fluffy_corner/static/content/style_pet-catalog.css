@@ -1,25 +1,41 @@
 .image_pet {
     width: 230px;
-    height: 240px;
+    height: 230px;
     border-radius: 10px;
+    object-fit: cover;
 }
 .block {
     display: flex;
     flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 17px
 }
 .name_pet {
     color: black;
-    font-size: 26px;
+    font-size: 27px;
     text-decoration: none;
-    margin-top: 12px;
-    font-weight: bold
+    margin-top: 14px;
+    font-weight: 860
 }
 .name_pet:hover {
     color: cornflowerblue;
 }
 .info_pet {
-    margin-top: 7px;
+    margin-top: 8px;
     font-size: 19px
+}
+
+.info_pet span {
+    display: block;
+    font-size: 20px
+}
+
+.gender {
+    margin-top: 8px;
 }
 .pets-container {
     display: flex;
