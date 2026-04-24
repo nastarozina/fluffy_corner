@@ -1,7 +1,34 @@
+/* =========================
+   Подключение пользовательского шрифта
+   ========================= */
 @font-face {
     font-family: 'baseFont';
     src: url('/static/fonts/SofiaSans-VariableFont_wght.ttf') format('truetype');
 }
+
+
+/* =========================
+   Основная структура страницы
+   ========================= */
+body {
+    font-family: 'baseFont';
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body-content {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+
+/* =========================
+   Шапка сайта (Header)
+   ========================= */
 header {
     position: fixed;
     top: 0;
@@ -19,54 +46,28 @@ header {
     justify-content: space-between;
     box-sizing: border-box;
 }
-body {
-    font-family: 'baseFont';
-    margin: 0;
-    min-height: 100vh;
+
+.site-header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
 }
-.body-content {
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px
+
+
+/* =========================
+   Логотип сайта
+   ========================= */
+.logo {
+    width: 70px;
+    height: 70px;
 }
-.navbar {
+
+.logo-container {
     display: flex;
-    gap: 70px;
-    padding-left: 0;
-    padding-right: 40px;
-}
-
-.navbar a {
-        color: black;
-        font-size: 20px;
-        text-decoration: none;
-        position: relative;
-        padding: 5px 0;
-        font-weight: 500;
-        transition: color 0.3s ease;
-}
-
-    .navbar a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background-color: #643E78;
-        transition: width 0.3s ease;
-    }
-
-.navbar a:hover::after {
-    width: 100%;
-}
-
-.navbar a:hover {
-    color: #643E78;
+    align-items: center;
+    gap: 10px;
 }
 
 .navbar-brand {
@@ -77,13 +78,53 @@ body {
     padding-left: 8px;
     padding-top: 7px
 }
-.site-header {
+
+
+/* =========================
+   Навигационное меню
+   ========================= */
+.navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: white;
+    gap: 70px;
+    padding-left: 0;
+    padding-right: 40px;
 }
+
+    .navbar a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        position: relative;
+        padding: 5px 0;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+        /* Анимация подчеркивания ссылки */
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #643E78;
+            transition: width 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .navbar a:hover {
+            color: #643E78;
+        }
+
+
+/* =========================
+   Кнопка в шапке сайта
+   ========================= */
 .button {
     display: inline-block;
     padding: 13px 35px;
@@ -98,35 +139,31 @@ body {
     transition: all 0.3s ease;
 }
 
-.button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
+    /* Эффект блеска при наведении */
+    .button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.5s ease;
+    }
 
-.button:hover::after {
-    left: 100%;
-}
+    .button:hover::after {
+        left: 100%;
+    }
 
-.button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(100, 62, 120, 0.4);
-}
+    .button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(100, 62, 120, 0.4);
+    }
 
-.logo {
-    width: 70px;
-    height: 70px;
-}
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+
+/* =========================
+   Заголовки страниц
+   ========================= */
 .header-h1 {
     font-size: 48px;
     margin-left: 70px;
@@ -134,6 +171,10 @@ body {
     margin-top: 60px
 }
 
+
+/* =========================
+   Подвал сайта (Footer)
+   ========================= */
 .footer {
     background-color: #181e21;
     color: white;
@@ -142,10 +183,10 @@ body {
     box-shadow: 0 -7px 10px rgba(0, 0, 0, 0.3);
 }
 
-.footer p span {
-    margin-left: 10px;
-    font-size: 18px
-}
+    .footer p span {
+        margin-left: 10px;
+        font-size: 18px
+    }
 
 .final {
     color: #928F8E;
@@ -157,6 +198,7 @@ hr {
     border: none;
     border-top: 1px solid #928F8E;
 }
+
 .Contacts-p {
     padding-top: 20px;
     font-size: 20px;
@@ -164,11 +206,17 @@ hr {
     text-decoration-color: cornflowerblue;
     text-underline-offset: 7px;
 }
+
+
+/* =========================
+   Иконки социальных сетей
+   ========================= */
 .icons {
     display: flex;
     gap: 15px;
     padding-left: 0;
 }
+
 .icon:hover {
     filter: grayscale(100%) brightness(70%);
 }

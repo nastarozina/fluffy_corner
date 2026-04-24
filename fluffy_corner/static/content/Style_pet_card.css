@@ -1,3 +1,6 @@
+/* =========================
+   Страница питомца (основной макет)
+   ========================= */
 .pet-page {
     display: flex;
     justify-content: space-between;
@@ -21,6 +24,28 @@
     margin-top: 35px
 }
 
+.auxiliary-link {
+    color: #643E78;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 80px
+}
+
+    .auxiliary-link:hover {
+        text-decoration: underline;
+    }
+
+    .auxiliary-link img {
+        width: 12px;
+        height: 12px;
+        margin-left: 19px
+    }
+
+
+/* =========================
+   Галерея фотографий питомца
+   ========================= */
 .gallery {
     display: flex;
     flex: 1;
@@ -34,6 +59,10 @@
     border-radius: 15px;
 }
 
+
+/* =========================
+   Кнопки переключения фотографий
+   ========================= */
 .nav-btn {
     width: 40px;
     height: fit-content;
@@ -44,12 +73,14 @@
     margin-top: 170px
 }
 
-.nav-btn:hover {
-    transform: scale(1.05);
-}
+    .nav-btn:hover {
+        transform: scale(1.05);
+    }
 
 
-
+/* =========================
+   Всплывающее окно (Popup)
+   ========================= */
 .popup {
     display: none;
     position: fixed;
@@ -69,21 +100,8 @@
     border-radius: 15px;
     z-index: 1001;
 }
-.auxiliary-link {
-    color: #643E78;
-    font-size: 24px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 80px
-}
-.auxiliary-link:hover {
-    text-decoration: underline;
-}
-.auxiliary-link img {
-    width: 12px;
-    height: 12px;
-    margin-left: 19px
-}
+
+
 .close-button {
     border-radius: 50%;
     font-size: 24px;
@@ -93,9 +111,15 @@
     margin-left: 750px;
     cursor: pointer
 }
-.close-button:hover {
+
+    .close-button:hover {
         background: #D2DAE8
+    }
+
+.for-close-button {
+    text-align: right;
 }
+
 .text_step {
     font-size: 24px;
     color: #643E78;
@@ -103,10 +127,7 @@
     margin-top: 10px;
     margin-bottom: 10px
 }
+
 .steps {
     margin: auto 40px;
-}
-
-.for-close-button {
-    text-align: right;
 }
