@@ -67,3 +67,10 @@ def pet_page(pet_id):
         pet=pet,
         title=pet['name']
     )
+@route('/activeUsers')
+@view('active_users')
+def about():
+    """Renders the active users page."""
+    return dict(
+        title = 'Помощники приюта'
+    )

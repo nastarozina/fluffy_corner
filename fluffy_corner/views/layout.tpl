@@ -21,6 +21,7 @@
             <a href="/pets">Найти питомца</a>
             <a href="/needs">Нужды</a>
             <a href="/stories">Счастливые истории</a>
+            <a href="/activeUsers">Наши помощники</a>
             <a href="/about">О нас</a>
         </nav>
         <a class="button" href="/help">Помочь</a>

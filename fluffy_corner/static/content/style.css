@@ -40,7 +40,7 @@ header {
 
 .header-content {
     width: 100%;
-    padding: 0 45px;
+    padding: 0 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +67,8 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
+    margin-left: -10px;
 }
 
 .navbar-brand {
@@ -85,7 +86,7 @@ header {
    ========================= */
 .navbar {
     display: flex;
-    gap: 70px;
+    gap: 65px;
     padding-left: 0;
     padding-right: 40px;
 }
@@ -133,7 +134,7 @@ header {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    margin-right: 58px;
+    margin-right: 48px;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
