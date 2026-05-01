@@ -1,6 +1,6 @@
 [
   {
-    "photo": "",
+    "photo": "/static/images/active_users/1.jpeg",
     "first_name": "Иван",
     "last_name": "Кузнецов",
     "phone": "+79990764831",
@@ -8,7 +8,7 @@
     "date": "2026-05-03"
   },
   {
-    "photo": "",
+    "photo": "/static/images/active_users/2.jpeg",
     "first_name": "Екатерина",
     "last_name": "Морозова",
     "phone": "+79066528174",
@@ -16,7 +16,7 @@
     "date": "2026-05-02"
   },
   {
-    "photo": "",
+    "photo": "/static/images/active_users/3.jpeg",
     "first_name": "Дмитрий",
     "last_name": "Волков",
     "phone": "+79602374615",
@@ -24,7 +24,7 @@
     "date": "2026-05-01"
   },
   {
-    "photo": "",
+    "photo": "/static/images/active_users/4.jpeg",
     "first_name": "София",
     "last_name": "Лебедева",
     "phone": "+79154186253",
@@ -32,7 +32,7 @@
     "date": "2026-04-30"
   },
   {
-    "photo": "",
+    "photo": "/static/images/active_users/5.jpeg",
     "first_name": "Алексей",
     "last_name": "Новиков",
     "phone": "+79997813564",

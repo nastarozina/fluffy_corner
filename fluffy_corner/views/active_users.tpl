@@ -2,18 +2,26 @@
 <link rel="stylesheet" type="text/css" href="/static/content/style_active-users.css"/>
 <h1 class="header-h1">{{ title }}</h1>
 <div>
+<div class="users-container">
 % for user in active_users:
-	<div class="block">
-		<!-- img class="image_pet" src=" ['pictures'][0]['source'] "> -->
-		<p class="info_pet">
-			<span class="birth">{{user['last_name']}}</span>
-			<span class="gender">{{user['first_name']}}</span>
-		</p>
-		<p>{{user['description']}}</p>
-		<p>{{user['phone']}}</p>
-	</div>
+  <div class="block">
+    <img class="photo" src="{{user['photo']}}" alt="photo">
+
+    <p class="info_pet">
+      <span class="birth">{{user['last_name']}}</span>
+      <span class="gender">{{user['first_name']}}</span>
+    </p>
+
+    <p class="description">{{user['description']}}</p>
+
+    <p class="inf">
+      <span class="bir"><img class="phot" src="/static/images/icon-telephone.png"></span>
+      <span class="phone">{{user['phone']}}</span>
+    </p>
+  </div>
 % end
-<hr>
+</div>
+<hr class="line">
 <form action="/home" method="post" enctype="multipart/form-data">
         <p><input type="text" size="50" name="USERNAME" placeholder="Имя" style="border: 1px solid gray;" minlength="3" maxlength="100" required></p>
         <p><input type="text" size="50" name="USERNAME" placeholder="Фамилия" style="border: 1px solid gray;" minlength="3" maxlength="100" required></p>
