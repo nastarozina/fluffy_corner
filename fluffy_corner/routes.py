@@ -8,6 +8,8 @@ import json
 
 with open(r"static\pets.json", "r", encoding="utf-8-sig") as pet_data:
     pets = json.load(pet_data)
+with open(r"static\active_users.json", "r", encoding="utf-8-sig") as users_data:
+    active_users = json.load(users_data)
 
 @route('/')
 @view('home')
@@ -72,5 +74,6 @@ def pet_page(pet_id):
 def about():
     """Renders the active users page."""
     return dict(
-        title = 'Помощники приюта'
+        title = 'Помощники приюта',
+        active_users = active_users
     )
