@@ -3,13 +3,11 @@ Routes and views for the bottle application.
 """
 
 
-from bottle import route, view, template, redirect, abort
+from bottle import route, view, template, redirect, abort, request
 import json
 
 with open(r"static\pets.json", "r", encoding="utf-8-sig") as pet_data:
     pets = json.load(pet_data)
-with open(r"static\active_users.json", "r", encoding="utf-8-sig") as users_data:
-    active_users = json.load(users_data)
 
 @route('/')
 @view('home')
@@ -73,7 +71,25 @@ def pet_page(pet_id):
 @view('active_users')
 def about():
     """Renders the active users page."""
+    with open(r"static\active_users.json", "r", encoding="utf-8-sig") as users_data:
+        active_users = json.load(users_data)
+
+    sort_type = request.query.get("sort")
+
+    if sort_type == "lastname_asc":
+        active_users = sorted(
+            active_users,
+            key=lambda user: user["last_name"]
+        )
+
+    elif sort_type == "lastname_desc":
+        active_users = sorted(
+            active_users,
+            key=lambda user: user["last_name"],
+            reverse=True
+        )
     return dict(
         title = 'Помощники приюта',
-        active_users = active_users
+        active_users = active_users,
+        sort_type=sort_type
     )
