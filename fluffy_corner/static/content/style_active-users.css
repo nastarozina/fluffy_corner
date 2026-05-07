@@ -1,3 +1,6 @@
+/* =========================
+   Поля ввода и textarea формы
+   ========================= */
 input,
 textarea {
     max-width: 315px;
@@ -12,6 +15,20 @@ textarea {
     margin-bottom: -4px;
 }
 
+input[type="text"] {
+    border: 1px solid gray;
+}
+
+html input[type="text"],
+textarea {
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px
+}
+
+/* =========================
+   Кнопки
+   ========================= */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -19,6 +36,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+/* Кнопка отправки формы */
 html input[type="submit"] {
     display: inline-block;
     padding: 11px 21px;
@@ -36,17 +54,19 @@ html input[type="submit"]:hover {
     background-color: #7e5a9c;
 }
 
-input[type="text"] {
-    border: 1px solid gray;
+/* =========================
+   Поле загрузки файла
+   ========================= */
+input[type="file"] {
+    min-width: 325px;
+    font-size: 15px;
+    margin-top: -10px;
 }
 
-.photo-text {
-    margin-top: 18px
-}
 input[type="file"]::file-selector-button {
     background-color: white;
     width: 150px;
-    height: 40px ;
+    height: 40px;
     color: #643E78;
     border: 1px solid #643E78;
     border-radius: 5px;
@@ -54,18 +74,30 @@ input[type="file"]::file-selector-button {
     font-size: 13px;
     margin-right: 10px;
 }
-html input[type="text"],
-textarea
-{
-    padding-left: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px
-}
+
+/* =========================
+   Форма добавления пользователя
+   ========================= */
 form {
     margin-top: 45px;
     margin-bottom: -53px;
     margin-left: 70px;
 }
+
+.photo-text {
+    margin-top: 18px
+}
+
+/* Сообщения об ошибках в форме */
+.error {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: -13px;
+}
+
+/* =========================
+   Контейнер карточек пользователей
+   ========================= */
 .users-container {
     display: flex;
     flex-wrap: wrap;
@@ -73,6 +105,7 @@ form {
     justify-content: center;
 }
 
+/* Карточка пользователя */
 .block {
     width: 260px;
     background: white;
@@ -84,9 +117,13 @@ form {
 }
 
 .block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+     transform: translateY(-5px);
+     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
+
+/* =========================
+   Отображение информации о пользователе
+   ========================= */
 
 .photo {
     width: 120px;
@@ -97,6 +134,7 @@ form {
     margin-bottom: 15px;
 }
 
+/* Блок имени и фамилии */
 .info_user {
     margin: 10px 0;
 }
@@ -120,12 +158,7 @@ form {
     line-height: 1.4;
 }
 
-.line {
-    margin-top: 35px;
-    margin-left: 70px;
-    margin-right: 55px
-}
-
+/* Блок телефона */
 .inscription_phone {
     display: flex;
     align-items: center;
@@ -146,12 +179,16 @@ form {
     object-fit: cover;
 }
 
-input[type="file"] {
-    min-width: 325px;
-    font-size: 15px;
-    margin-top: -10px;
+/* Разделительная линия */
+.line {
+    margin-top: 35px;
+    margin-left: 70px;
+    margin-right: 55px
 }
 
+/* =========================
+   Кнопки сортировки
+   ========================= */
 .sort-container {
     display: flex;
     gap: 10px;
@@ -173,10 +210,4 @@ input[type="file"] {
 .sort-btn.active {
     color: #643E78;
     border: 2px solid #643E78;
-}
-
-.error {
-    color: #d32f2f;
-    font-size: 14px;
-    margin-top: -13px;
 }

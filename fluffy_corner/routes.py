@@ -73,12 +73,16 @@ def pet_page(pet_id):
 @route('/activeUsers')
 @view('active_users')
 def about():
-    """Renders the active users page."""
+    """Отображение страницы активных пользователей."""
+
+    # Загружаем список пользователей из JSON
     with open(r"static\active_users.json", "r", encoding="utf-8") as users_data:
         active_users = json.load(users_data)
 
+    # Получаем тип сортировки из URL
     sort_type = request.query.get("sort")
 
+    # Сортировка по фамилии
     if sort_type == "lastname_asc":
         active_users = sorted(
             active_users,
@@ -91,9 +95,11 @@ def about():
             key=lambda user: user["last_name"],
             reverse=True
         )
+
+    # Передача данных в шаблон
     return dict(
-        title = 'Помощники приюта',
-        active_users = active_users,
+        title='Помощники приюта',
+        active_users=active_users,
         sort_type=sort_type,
         errors={},
         form={}
@@ -103,16 +109,24 @@ def about():
 def my_form():
     errors = {}
 
+    # Папка, куда загружать изображения
     UPLOAD_DIR = r"static\images\active_users"
-    ALLOWED_EXTENSIONS = { '.tif', '.jfif', '.pjp', '.apng', '.xbm', '.jxl', '.jpe', '.jpeg', '.heif', '.ico', '.tiff', 
-                          '.webp', '.svgz', '.jpg', '.heic', '.gif', '.svg', '.png', '.bmp', '.pjpeg', '.avif' }
-    
+
+    ALLOWED_EXTENSIONS = {
+        '.tif', '.jfif', '.pjp', '.apng', '.xbm', '.jxl',
+        '.jpe', '.jpeg', '.heif', '.ico', '.tiff', '.webp',
+        '.svgz', '.jpg', '.heic', '.gif', '.svg', '.png',
+        '.bmp', '.pjpeg', '.avif'
+    }
+
+    # Загружаем существующих пользователей
     with open(r"static\active_users.json", "r", encoding="utf-8-sig") as users_data:
         active_users = json.load(users_data)
-    
+
+    # Генерация следующего id
     next_id = max((user["id"] for user in active_users), default=0) + 1
-    
-    # Регулярные выражения
+
+    # Регулярные выражения для проверки данных
     pattern_name = r"^[А-Яа-яЁё]{2,40}$"
     pattern_activity = r'^[^A-Za-z]*[А-Яа-яЁё][^A-Za-z]*$'
     pattern_phone = r"^\+\d{9,17}$"
@@ -124,28 +138,37 @@ def my_form():
     phone = request.forms.getunicode('PHONE').strip()
     upload = request.files.get('PHOTO')
 
+    # Удаляем лишние пробелы из описания деятельности
     activity = " ".join(activity.split())
 
+    # Проверка имени
     if not re.match(pattern_name, first_name):
         errors["first_name"] = "Некорректное имя"
 
+    # Проверка фамилии
     if not re.match(pattern_name, last_name):
         errors["last_name"] = "Некорректная фамилия"
 
+    # Проверка описания деятельности
     if len(activity) < 10 or len(activity) > 200 or not re.match(pattern_activity, activity):
         errors["activity"] = "Некорректный формат деятельности"
 
+    # Проверка телефона
     if not re.match(pattern_phone, phone):
         errors["phone"] = "Некорректный телефон"
 
+    # Проверка загрузки файла
     if not upload:
-         errors["photo"] = "Нет файла"
+        errors["photo"] = "Нет файла"
 
+    # Проверка уникальности телефона
     if any(u["phone"] == phone for u in active_users):
         errors["phone"] = "Человек с таким номером уже добавлен"
 
+    # Если есть ошибки — возвращаем форму обратно
     if errors:
-        return template("active_users",
+        return template(
+            "active_users",
             title="Помощники приюта",
             active_users=active_users,
             sort_type=None,
@@ -153,11 +176,15 @@ def my_form():
             form=request.forms
         )
 
+    # Делаем первую букву описания заглавной
     activity = activity[0].upper() + activity[1:]
+
+    # Формирование имени файла
     extension = os.path.splitext(upload.filename)[1].lower()
     filename = f"{next_id}{extension}"
     filepath = os.path.join(UPLOAD_DIR, filename)
-   
+
+    # Проверка расширения файла
     if extension not in ALLOWED_EXTENSIONS:
         errors["photo"] = "Недопустимый формат (не изображение)"
         return template("active_users",
@@ -168,21 +195,27 @@ def my_form():
             form=request.forms
         )
     else:
+        # Создание папки (если не существует) и сохранение изображения
         os.makedirs(UPLOAD_DIR, exist_ok=True)
         upload.save(filepath)
-   # Создание новой записи пользователя
+
+    # Создание новой записи пользователя
     new_entry = {
-            "id": next_id,
-            "photo": f"/static/images/active_users/{filename}",
-            "first_name": first_name,
-            "last_name": last_name,
-            "phone": phone,
-            "description": activity,
-            "date": date.today().strftime("%Y-%m-%d")
+        "id": next_id,
+        "photo": f"/static/images/active_users/{filename}",
+        "first_name": first_name,
+        "last_name": last_name,
+        "phone": phone,
+        "description": activity,
+        "date": date.today().strftime("%Y-%m-%d")
     }
+
+    # Добавляем нового пользователя в список
     active_users.append(new_entry)
-    # Сохраняем обновлённые данные в файл
+
+    # Сохраняем обновлённые данные в JSON-файл
     with open(r'static\active_users.json', 'w', encoding="utf-8") as users_data:
         json.dump(active_users, users_data, indent=4, ensure_ascii=False)
-    
+
+    # Переход на страницу (перезагрузка)
     return redirect("/activeUsers")
