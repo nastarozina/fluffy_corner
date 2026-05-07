@@ -9,6 +9,7 @@ textarea {
 
 textarea {
     resize: none;
+    margin-bottom: -4px;
 }
 
 button,
@@ -178,5 +179,4 @@ input[type="file"] {
     color: #d32f2f;
     font-size: 14px;
     margin-top: -13px;
-    margin-left: 4px;
 }

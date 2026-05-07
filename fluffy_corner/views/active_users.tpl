@@ -32,22 +32,33 @@
 </div>
 <hr class="line">
 <form action="/activeUsers/add" method="post" enctype="multipart/form-data">
-    <p><input type="text" size="50" name="FIRST_NAME" placeholder="Имя" minlength="2" maxlength="40" required>
+    <p><input type="text" size="50" name="FIRST_NAME" placeholder="Имя" minlength="2" maxlength="40"
+               value="{{form.get('FIRST_NAME', '')}}" required>
+
         % if errors.get("first_name"):
             <div class="error">{{errors["first_name"]}}</div>
         % end
     </p>
-    <p><input type="text" size="50" name="LAST_NAME" placeholder="Фамилия" minlength="2" maxlength="40" required>
+
+    <p><input type="text" size="50" name="LAST_NAME" placeholder="Фамилия" minlength="2" maxlength="40"
+               value="{{form.get('LAST_NAME', '')}}" required>
+
         % if errors.get("last_name"):
             <div class="error">{{errors["last_name"]}}</div>
         % end
     </p>
-    <p><textarea rows="2" cols="50" name="ACTIVITY" placeholder="Деятельность" minlength="10" maxlength="200" required></textarea>
+
+    <p><textarea rows="2" cols="50" name="ACTIVITY" placeholder="Деятельность" minlength="10" maxlength="200"
+                  required>{{form.get('ACTIVITY', '')}}</textarea>
+
         % if errors.get("activity"):
             <div class="error">{{errors["activity"]}}</div>
         % end
     </p>
-    <p><input type="text" size="50" name="PHONE" placeholder="Телефон" minlength="10" maxlength="18" required>
+
+    <p><input type="text" size="50" name="PHONE" placeholder="Телефон" minlength="10" maxlength="18"
+               value="{{form.get('PHONE', '')}}" required>
+
         % if errors.get("phone"):
             <div class="error">{{errors["phone"]}}</div>
         % end

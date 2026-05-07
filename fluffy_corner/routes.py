@@ -102,7 +102,6 @@ def about():
 @post('/activeUsers/add')
 def my_form():
     errors = {}
-    form = {}
 
     UPLOAD_DIR = r"static\images\active_users"
     ALLOWED_EXTENSIONS = { '.tif', '.jfif', '.pjp', '.apng', '.xbm', '.jxl', '.jpe', '.jpeg', '.heif', '.ico', '.tiff', 
@@ -125,11 +124,6 @@ def my_form():
     phone = request.forms.getunicode('PHONE').strip()
     upload = request.files.get('PHOTO')
 
-    form["first_name"] = first_name
-    form["last_name"] = last_name
-    form["activity"] = activity
-    form["phone"] = phone
-
     activity = " ".join(activity.split())
 
     if not re.match(pattern_name, first_name):
@@ -148,7 +142,7 @@ def my_form():
          errors["photo"] = "Нет файла"
 
     if any(u["phone"] == phone for u in active_users):
-        errors["phone"] = "Такой телефон уже существует"
+        errors["phone"] = "Человек с таким номером уже добавлен"
 
     if errors:
         return template("active_users",
@@ -156,7 +150,7 @@ def my_form():
             active_users=active_users,
             sort_type=None,
             errors=errors,
-            form=form
+            form=request.forms
         )
 
     activity = activity[0].upper() + activity[1:]
@@ -171,7 +165,7 @@ def my_form():
             active_users=active_users,
             sort_type=None,
             errors=errors,
-            form=form
+            form=request.forms
         )
     else:
         os.makedirs(UPLOAD_DIR, exist_ok=True)
