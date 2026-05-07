@@ -31,14 +31,35 @@
 % end
 </div>
 <hr class="line">
-<form action="/home" method="post" enctype="multipart/form-data">
-        <p><input type="text" size="50" name="USERNAME" placeholder="Имя" style="border: 1px solid gray;" minlength="3" maxlength="100" required></p>
-        <p><input type="text" size="50" name="USERNAME" placeholder="Фамилия" style="border: 1px solid gray;" minlength="3" maxlength="100" required></p>
-        <p><textarea rows="2" cols="50" name="QUEST" placeholder="Деятельность" style="resize:none;" minlength="10" maxlength="300" required></textarea></p> 
-        <p><input type="text" size="50" name="USERNAME" placeholder="Телефон" style="border: 1px solid gray;" minlength="3" maxlength="100" required></p>
-        <p class="photo-text">Фотография</p>
-        <p><input type="file" name="file" accept="image/*" required></p>
-        <p><input type="submit" value="Разместить"></p>
+<form action="/activeUsers/add" method="post" enctype="multipart/form-data">
+    <p><input type="text" size="50" name="FIRST_NAME" placeholder="Имя" minlength="2" maxlength="40" required>
+        % if errors.get("first_name"):
+            <div class="error">{{errors["first_name"]}}</div>
+        % end
+    </p>
+    <p><input type="text" size="50" name="LAST_NAME" placeholder="Фамилия" minlength="2" maxlength="40" required>
+        % if errors.get("last_name"):
+            <div class="error">{{errors["last_name"]}}</div>
+        % end
+    </p>
+    <p><textarea rows="2" cols="50" name="ACTIVITY" placeholder="Деятельность" minlength="10" maxlength="200" required></textarea>
+        % if errors.get("activity"):
+            <div class="error">{{errors["activity"]}}</div>
+        % end
+    </p>
+    <p><input type="text" size="50" name="PHONE" placeholder="Телефон" minlength="10" maxlength="18" required>
+        % if errors.get("phone"):
+            <div class="error">{{errors["phone"]}}</div>
+        % end
+    </p>
+
+    <p class="photo-text">Фотография</p>
+    <p><input type="file" name="PHOTO" accept="image/*" required>
+        % if errors.get("photo"):
+            <div class="error">{{errors["photo"]}}</div>
+        % end
+    </p>
+    <p><input type="submit" value="Разместить"></p>
 </form>
 </div>
 </div>

@@ -1,42 +1,47 @@
 [
-  {
-    "photo": "/static/images/active_users/1.jpeg",
-    "first_name": "Иван",
-    "last_name": "Кузнецов",
-    "phone": "+79990764831",
-    "description": "Активный волонтёр: ежедневно занимается выгулом собак",
-    "date": "2026-05-03"
-  },
-  {
-    "photo": "/static/images/active_users/2.jpeg",
-    "first_name": "Екатерина",
-    "last_name": "Морозова",
-    "phone": "+79066528174",
-    "description": "Регулярно поставляет медикаменты и помогает с лечением животных",
-    "date": "2026-05-02"
-  },
-  {
-    "photo": "/static/images/active_users/3.jpeg",
-    "first_name": "Дмитрий",
-    "last_name": "Волков",
-    "phone": "+79602374615",
-    "description": "Постоянный донатер: ежемесячно оказывает финансовую поддержку приюту",
-    "date": "2026-05-01"
-  },
-  {
-    "photo": "/static/images/active_users/4.jpeg",
-    "first_name": "София",
-    "last_name": "Лебедева",
-    "phone": "+79154186253",
-    "description": "Еженедельно привозит корм и расходные материалы для животных",
-    "date": "2026-04-30"
-  },
-  {
-    "photo": "/static/images/active_users/5.jpeg",
-    "first_name": "Алексей",
-    "last_name": "Новиков",
-    "phone": "+79997813564",
-    "description": "Постоянный волонтёр: помогает в уборке и уходе за животными",
-    "date": "2026-04-29"
-  }
+    {
+        "id": 1,
+        "photo": "/static/images/active_users/1.jpeg",
+        "first_name": "Алексей",
+        "last_name": "Новиков",
+        "phone": "+79997813564",
+        "description": "Постоянный волонтёр: помогает в уборке и уходе за животными",
+        "date": "2026-04-29"
+    },
+    {
+        "id": 2,
+        "photo": "/static/images/active_users/2.jpeg",
+        "first_name": "София",
+        "last_name": "Лебедева",
+        "phone": "+79154186253",
+        "description": "Еженедельно привозит корм и расходные материалы для животных",
+        "date": "2026-04-30"
+    },
+    {
+        "id": 3,
+        "photo": "/static/images/active_users/3.jpeg",
+        "first_name": "Дмитрий",
+        "last_name": "Волков",
+        "phone": "+79602374615",
+        "description": "Постоянный донатер: ежемесячно оказывает финансовую поддержку приюту",
+        "date": "2026-05-01"
+    },
+    {
+        "id": 4,
+        "photo": "/static/images/active_users/4.jpeg",
+        "first_name": "Екатерина",
+        "last_name": "Морозова",
+        "phone": "+79066528174",
+        "description": "Регулярно поставляет медикаменты и помогает с лечением животных",
+        "date": "2026-05-02"
+    },
+    {
+        "id": 5,
+        "photo": "/static/images/active_users/5.jpeg",
+        "first_name": "Иван",
+        "last_name": "Кузнецов",
+        "phone": "+79990764831",
+        "description": "Активный волонтёр: ежедневно занимается выгулом собак",
+        "date": "2026-05-03"
+    }
 ]

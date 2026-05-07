@@ -3,8 +3,11 @@ Routes and views for the bottle application.
 """
 
 
-from bottle import route, view, template, redirect, abort, request
+from bottle import route, view, template, redirect, abort, request, post
 import json
+from datetime import date
+import re
+import os
 
 with open(r"static\pets.json", "r", encoding="utf-8-sig") as pet_data:
     pets = json.load(pet_data)
@@ -71,7 +74,7 @@ def pet_page(pet_id):
 @view('active_users')
 def about():
     """Renders the active users page."""
-    with open(r"static\active_users.json", "r", encoding="utf-8-sig") as users_data:
+    with open(r"static\active_users.json", "r", encoding="utf-8") as users_data:
         active_users = json.load(users_data)
 
     sort_type = request.query.get("sort")
@@ -91,5 +94,101 @@ def about():
     return dict(
         title = 'Помощники приюта',
         active_users = active_users,
-        sort_type=sort_type
+        sort_type=sort_type,
+        errors={},
+        form={}
     )
+
+@post('/activeUsers/add')
+def my_form():
+    errors = {}
+    form = {}
+
+    UPLOAD_DIR = r"static\images\active_users"
+    ALLOWED_EXTENSIONS = { '.tif', '.jfif', '.pjp', '.apng', '.xbm', '.jxl', '.jpe', '.jpeg', '.heif', '.ico', '.tiff', 
+                          '.webp', '.svgz', '.jpg', '.heic', '.gif', '.svg', '.png', '.bmp', '.pjpeg', '.avif' }
+    
+    with open(r"static\active_users.json", "r", encoding="utf-8-sig") as users_data:
+        active_users = json.load(users_data)
+    
+    next_id = max((user["id"] for user in active_users), default=0) + 1
+    
+    # Регулярные выражения
+    pattern_name = r"^[А-Яа-яЁё]{2,40}$"
+    pattern_activity = r'^[^A-Za-z]*[А-Яа-яЁё][^A-Za-z]*$'
+    pattern_phone = r"^\+\d{9,17}$"
+
+    # Получение данных формы
+    first_name = request.forms.getunicode('FIRST_NAME').strip().capitalize()
+    last_name = request.forms.getunicode('LAST_NAME').strip().capitalize()
+    activity = request.forms.getunicode('ACTIVITY').strip()
+    phone = request.forms.getunicode('PHONE').strip()
+    upload = request.files.get('PHOTO')
+
+    form["first_name"] = first_name
+    form["last_name"] = last_name
+    form["activity"] = activity
+    form["phone"] = phone
+
+    activity = " ".join(activity.split())
+
+    if not re.match(pattern_name, first_name):
+        errors["first_name"] = "Некорректное имя"
+
+    if not re.match(pattern_name, last_name):
+        errors["last_name"] = "Некорректная фамилия"
+
+    if len(activity) < 10 or len(activity) > 200 or not re.match(pattern_activity, activity):
+        errors["activity"] = "Некорректный формат деятельности"
+
+    if not re.match(pattern_phone, phone):
+        errors["phone"] = "Некорректный телефон"
+
+    if not upload:
+         errors["photo"] = "Нет файла"
+
+    if any(u["phone"] == phone for u in active_users):
+        errors["phone"] = "Такой телефон уже существует"
+
+    if errors:
+        return template("active_users",
+            title="Помощники приюта",
+            active_users=active_users,
+            sort_type=None,
+            errors=errors,
+            form=form
+        )
+
+    activity = activity[0].upper() + activity[1:]
+    extension = os.path.splitext(upload.filename)[1].lower()
+    filename = f"{next_id}{extension}"
+    filepath = os.path.join(UPLOAD_DIR, filename)
+   
+    if extension not in ALLOWED_EXTENSIONS:
+        errors["photo"] = "Недопустимый формат (не изображение)"
+        return template("active_users",
+            title="Помощники приюта",
+            active_users=active_users,
+            sort_type=None,
+            errors=errors,
+            form=form
+        )
+    else:
+        os.makedirs(UPLOAD_DIR, exist_ok=True)
+        upload.save(filepath)
+   # Создание новой записи пользователя
+    new_entry = {
+            "id": next_id,
+            "photo": f"/static/images/active_users/{filename}",
+            "first_name": first_name,
+            "last_name": last_name,
+            "phone": phone,
+            "description": activity,
+            "date": date.today().strftime("%Y-%m-%d")
+    }
+    active_users.append(new_entry)
+    # Сохраняем обновлённые данные в файл
+    with open(r'static\active_users.json', 'w', encoding="utf-8") as users_data:
+        json.dump(active_users, users_data, indent=4, ensure_ascii=False)
+    
+    return redirect("/activeUsers")
