@@ -1,4 +1,4 @@
-"""
+﻿"""
 Routes and views for partners management.
 """
 
@@ -8,7 +8,7 @@ import os
 from datetime import datetime
 import re
 
-# ========== PARTNERS SETTINGS ==========
+#  PARTNERS SETTINGS 
 PARTNERS_FILE = r"static\partners.json"
 
 # Load partners from JSON file
