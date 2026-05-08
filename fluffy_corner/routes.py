@@ -8,6 +8,7 @@ import json
 from datetime import date
 import re
 import os
+from validation import validate_phone, validate_name, validate_activity
 
 with open(r"static\pets.json", "r", encoding="utf-8-sig") as pet_data:
     pets = json.load(pet_data)
@@ -126,11 +127,6 @@ def my_form():
     # Генерация следующего id
     next_id = max((user["id"] for user in active_users), default=0) + 1
 
-    # Регулярные выражения для проверки данных
-    pattern_name = r"^[А-Яа-яЁё]{2,40}$"
-    pattern_activity = r'^[^A-Za-z]*[А-Яа-яЁё][^A-Za-z]*$'
-    pattern_phone = r"^\+\d{9,17}$"
-
     # Получение данных формы
     first_name = request.forms.getunicode('FIRST_NAME').strip().capitalize()
     last_name = request.forms.getunicode('LAST_NAME').strip().capitalize()
@@ -142,19 +138,19 @@ def my_form():
     activity = " ".join(activity.split())
 
     # Проверка имени
-    if not re.match(pattern_name, first_name):
+    if not validate_name(first_name):
         errors["first_name"] = "Некорректное имя"
 
     # Проверка фамилии
-    if not re.match(pattern_name, last_name):
+    if not validate_name(last_name):
         errors["last_name"] = "Некорректная фамилия"
 
     # Проверка описания деятельности
-    if len(activity) < 10 or len(activity) > 200 or not re.match(pattern_activity, activity):
+    if not validate_activity(activity):
         errors["activity"] = "Некорректный формат деятельности"
 
     # Проверка телефона
-    if not re.match(pattern_phone, phone):
+    if not validate_phone(phone):
         errors["phone"] = "Некорректный телефон"
 
     # Проверка загрузки файла
