@@ -3,28 +3,26 @@
 
 <div class="partners-page">
     
-    <!-- Герой-секция -->
     <section class="hero-partners">
-        <div class="hero-content animate-slide-in">
+        <div class="hero-content">
             <h1>Наши партнёры</h1>
             <p class="hero-subtitle">Компании, которые помогают нам делать добро</p>
         </div>
     </section>
 
-    <!-- Список партнёров -->
     <section class="partners-list-section">
-        <h2 class="animate-title">С нами сотрудничают</h2>
+        <h2>С нами сотрудничают</h2>
         
         % if partners:
             <div class="partners-grid">
                 % for partner in partners:
-                    <div class="partner-card animate-card">
-                        <div class="partner-icon bounce">🤝</div>
+                    <div class="partner-card">
+                        <div class="partner-icon">🤝</div>
                         <div class="partner-info">
-                            <h3 class="partner-name">{{partner['name']}}</h3>
-                            <p class="partner-phone">📞 {{partner['phone']}}</p>
-                            <p class="partner-description">{{partner['description']}}</p>
-                            <p class="partner-date">📅 С нами с {{partner['date']}}</p>
+                            <h3 class="partner-name">{{partner.get('name', '')}}</h3>
+                            <p class="partner-phone">📞 {{partner.get('phone', '')}}</p>
+                            <p class="partner-description">{{partner.get('description', '')}}</p>
+                            <p class="partner-date">📅 С нами с {{partner.get('date', '')}}</p>
                         </div>
                     </div>
                 % end
@@ -36,10 +34,9 @@
         % end
     </section>
 
-    <!-- Форма добавления партнёра -->
     <section class="add-partner-section">
-        <h2 class="animate-title">Стать партнёром</h2>
-        <div class="form-container animate-scale">
+        <h2>Стать партнёром</h2>
+        <div class="form-container">
             <form action="/add_partner" method="post" class="partner-form">
                 <div class="form-group">
                     <label for="name">Наименование компании <span class="required">*</span></label>
@@ -60,7 +57,7 @@
                            id="phone" 
                            name="phone" 
                            value="{{form_data.get('phone', '')}}"
-                           placeholder="+7(123)456-78-90 или 89123456789"
+                           placeholder="+7(123)456-78-90"
                            class="form-control {{ 'error' if errors.get('phone') else '' }}">
                     % if errors.get('phone'):
                         <div class="error-message">{{errors['phone']}}</div>
@@ -68,7 +65,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="description">Описание деятельности <span class="required">*</span></label>
+                    <label for="description">Описание <span class="required">*</span></label>
                     <textarea id="description" 
                               name="description" 
                               rows="4"
@@ -80,7 +77,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="date">Дата регистрации как партнёра <span class="required">*</span></label>
+                    <label for="date">Дата регистрации <span class="required">*</span></label>
                     <input type="date" 
                            id="date" 
                            name="date" 
@@ -92,7 +89,7 @@
                 </div>
 
                 <div class="form-actions">
-                    <button type="submit" class="button-primary pulse">Добавить партнёра</button>
+                    <button type="submit" class="button-primary">Добавить партнёра</button>
                 </div>
             </form>
         </div>
