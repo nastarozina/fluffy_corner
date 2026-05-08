@@ -1,0 +1,227 @@
+/* === Стили для страницы donate-page (аналогично needs-page) === */
+
+.donate-intro {
+    background-color: #f8f9fa;
+    padding: 25px 30px;
+    border-radius: 20px;
+    margin: 30px 0 40px 0;
+    border-left: 5px solid #643E78;
+}
+
+.donate-intro p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+/* Основные блоки (чередование) */
+.donate-top,
+.donate-top-left {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.donate-top .donate-section,
+.donate-top-left .donate-section {
+    flex: 1;
+}
+
+/* Стили секций */
+.donate-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.donate-top .donate-section {
+    background-color: #f9f5ff; /* светло-фиолетовый */
+}
+
+.donate-top-left .donate-section {
+    background-color: #e6f0ff; /* светло-голубой */
+}
+
+.donate-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(100, 62, 120, 0.15);
+}
+
+.donate-section h2 {
+    font-size: 32px;
+    color: #181e21;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.donate-section h2::before {
+    content: '🐾';
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+.donate-section p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.donate-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.donate-section ul li {
+    font-size: 17px;
+    color: #555;
+    padding: 10px 0 10px 35px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.donate-section ul li:last-child {
+    border-bottom: none;
+}
+
+.donate-section ul li::before {
+    content: '✓';
+    color: #643E78;
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+}
+
+/* Карточка платёжных реквизитов */
+.payment-details {
+    background-color: #f3f0f5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.payment-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #181e21;
+}
+
+.payment-details strong {
+    color: #643E78;
+    min-width: 140px;
+    display: inline-block;
+}
+
+.note-small {
+    font-size: 15px;
+    color: #777;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Блок QR-кода */
+.donate-qr-block {
+    margin: 60px 0;
+    background: linear-gradient(145deg, #f0eef3, #ffffff);
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(100, 62, 120, 0.15);
+}
+
+.qr-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.qr-code {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.qr-code p {
+    font-size: 16px;
+    color: #643E78;
+    font-weight: bold;
+}
+
+.qr-description {
+    flex: 1;
+    min-width: 300px;
+}
+
+.qr-description h2 {
+    font-size: 32px;
+    color: #181e21;
+    margin-bottom: 15px;
+}
+
+.qr-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.qr-description ul li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    font-size: 18px;
+}
+
+.qr-description ul li::before {
+    content: '✓';
+    color: #643E78;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+/* Нижний блок с большой кнопкой */
+.donate-bottom {
+    margin: 60px 0 30px;
+    background: linear-gradient(135deg, #f3f0f5 0%, #ffffff 100%);
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.donate-quick p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+
+
+.donate-note {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #643E78;
+    background-color: #fff0e0;
+    padding: 15px 20px;
+    border-radius: 50px;
+    display: inline-block;
+}
