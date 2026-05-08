@@ -1,0 +1,308 @@
+.about-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+    .about-section h2 {
+        color: #643E78;
+        font-size: 32px;
+        margin-bottom: 25px;
+        border-left: 5px solid #643E78;
+        padding-left: 20px;
+    }
+
+    .about-section h3 {
+        color: #643E78;
+        font-size: 24px;
+        margin: 25px 0 15px 0;
+    }
+
+    .about-section p {
+        line-height: 1.8;
+        color: #444;
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.about-card {
+    background: #f8f5ff;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #643E78;
+    transition: transform 0.3s ease;
+}
+
+    .about-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(100, 62, 120, 0.2);
+    }
+
+    .about-card .number {
+        font-size: 48px;
+        font-weight: bold;
+        color: #643E78;
+        display: block;
+        line-height: 1.2;
+    }
+
+    .about-card .label {
+        font-size: 18px;
+        color: #333;
+    }
+
+.mission-box {
+    background: linear-gradient(135deg, #643E78, #8a5ca0);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+    .mission-box p {
+        color: white;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+.team-section {
+    margin: 50px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    border: 3px solid #643E78;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+.team-card h4 {
+    color: #643E78;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.team-card .position {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.team-card .description {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .values-list li {
+        padding: 15px;
+        margin-bottom: 10px;
+        background: #f8f5ff;
+        border-radius: 10px;
+        border-left: 4px solid #643E78;
+        font-size: 17px;
+        color: #333;
+    }
+
+        .values-list li strong {
+            color: #643E78;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.photo-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    border: 3px dashed #643E78;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}
+
+    .photo-placeholder.large {
+        height: 300px;
+        grid-column: span 2;
+    }
+
+.contact-box {
+    background: #f8f5ff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    border: 2px solid #643E78;
+}
+
+    .contact-box p {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .contact-box strong {
+        color: #643E78;
+        min-width: 120px;
+        display: inline-block;
+    }
+
+/* Дополнительные стили для фото команды */
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #643E78;
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-photo-placeholder .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+}
+/* Стили для изображений в photo-placeholder - фото внутри фиолетовых рамок */
+.photo-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+    border: 3px dashed #643E78;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #643E78;
+    font-size: 16px;
+    text-align: center;
+    padding: 0; /* Убираем внутренние отступы */
+    overflow: hidden;
+    position: relative;
+}
+
+    .photo-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Растягивает фото на всю область */
+        display: block;
+        border: none;
+        border-radius: 12px; /* Чуть меньше, чем у родителя, чтобы не перекрывать рамку */
+    }
+
+    .photo-placeholder .placeholder-image {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #643E78;
+        font-size: 16px;
+        text-align: center;
+        border: none;
+    }
+
+    /* Для больших фото */
+    .photo-placeholder.large {
+        height: 300px;
+        grid-column: span 2;
+        padding: 0;
+    }
+
+/* Стили для фото команды (круглые, без изменений) */
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #643E78;
+    position: relative;
+    background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+}
+
+    .team-photo-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .team-photo-placeholder .placeholder-image {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #f0e6ff, #e0d0ff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #643E78;
+        font-size: 14px;
+        text-align: center;
+        border: none;
+    }

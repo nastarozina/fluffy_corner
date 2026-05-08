@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36603.0 d17.14
+VisualStudioVersion = 17.14.36603.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "fluffy_corner", "fluffy_corner\fluffy_corner.pyproj", "{3B493777-4B12-4F96-9CFA-02FB744CE11A}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "sait_test", "sait_test\sait_test.pyproj", "{B9E85997-6ACA-4AD4-B902-0F66FE4EA294}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3B493777-4B12-4F96-9CFA-02FB744CE11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B493777-4B12-4F96-9CFA-02FB744CE11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B493777-4B12-4F96-9CFA-02FB744CE11A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E85997-6ACA-4AD4-B902-0F66FE4EA294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E85997-6ACA-4AD4-B902-0F66FE4EA294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E85997-6ACA-4AD4-B902-0F66FE4EA294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E85997-6ACA-4AD4-B902-0F66FE4EA294}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

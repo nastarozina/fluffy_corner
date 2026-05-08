@@ -1,0 +1,40 @@
+.pet-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Информация слева */
+.pet-info {
+    flex: 1;
+    font-size: 22px;
+    margin-left: 73px;
+    flex-wrap: wrap;
+}
+
+/* Галерея справа */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+/* Фото */
+.pet-photo {
+    width: 100%;
+    border-radius: 15px;
+}
+.pet-page {
+    display: flex;
+    gap: 40px;
+}
+
+.gallery {
+    order: 2; /* отправляем вправо */
+}
+
+.pet-info {
+    order: 1; /* оставляем слева */
+}
