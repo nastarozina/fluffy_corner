@@ -7,13 +7,13 @@
     
 }
 .needs-conten{
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 0 auto;
     
     
 }
 
-/* Базовые стили для блоков */
+/* стили для блоков */
 .needs-section {
     background-color: white;
     border-radius: 15px;
@@ -41,7 +41,7 @@
     }
 .needs-top {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     align-items: flex-start;
     margin-bottom: 40px
 }
@@ -68,7 +68,7 @@
 
 .needs-top-left {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     align-items: flex-start;
     margin-bottom: 40px
     

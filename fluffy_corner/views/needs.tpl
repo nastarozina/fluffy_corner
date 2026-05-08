@@ -1,13 +1,13 @@
 % rebase('layout.tpl', title=title)
 <link rel="stylesheet" type="text/css" href="/static/content/style_needs.css" />
 <div class="needs-page">
-
+<div class="needs-conten"> 
     <h1 class="header-h1">Что нужно нашему приюту</h1>
     
     <div class="needs-intro">
         <p>Каждый день мы заботимся о более чем 50 подопечных. Чтобы наши хвостики были сыты, здоровы и счастливы, нам постоянно требуется помощь. Мы будем благодарны за любую поддержку!</p>
     </div>
-<div class="needs-conten">  
+ 
     <div class="needs-top">
         
         <div class="needs-section">
